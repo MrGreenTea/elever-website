@@ -1,5 +1,20 @@
 ---
+import { Image } from "astro:assets";
 
+import Divider from "../components/Divider.astro";
+import Button from "../components/Button.astro";
+import ContactForm from "../components/ContactForm.astro";
+
+import HeroIllustration from "../assets/hero-illustration.svg";
+import RobotWithModules from "../assets/robot-with-modules.svg";
+import LearningGroup from "../assets/learning-group-books.svg";
+import Builders from "../assets/builders.svg";
+import Metrics from "../assets/Metrics.svg";
+import PlaneGuys from "../assets/plane_guys.svg";
+import AltusForgeLogo from "../assets/AF Logo.svg";
+
+const moduleIllustrations = await Astro.glob("../assets/modules/*.svg");
+const desktopScreenshots = await Astro.glob("../assets/screenshots/*.svg");
 ---
 
 <html lang="en">
@@ -8,9 +23,224 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Elever</title>
   </head>
-  <body>
-    <h1>Astro</h1>
+  <body class="bg-background pt-10 text-white">
+    <div class="px-14 pb-10">
+      <h1 class="text-5xl font-semibold leading-tight">The Elever App</h1>
+      <Divider class="mt-6" />
+      <section>
+        <h2 class="mt-4 text-xl">Transform learning routines</h2>
+        <p class="mt-3 text-sm">
+          Build lasting habits with the touch of one finger
+        </p>
+        <Image
+          src={HeroIllustration}
+          alt="Illustration of people using the Elever app"
+          class="mt-3 w-full"
+        />
+        <div>
+          <Button text="Request a demo" class="mt-10" href="#" />
+        </div>
+      </section>
+      <section class="mt-10">
+        <h2>VALUE PROPOSITION</h2>
+        <Image
+          class="mt-8"
+          src={RobotWithModules}
+          alt="Illustration of people adding puzzle pieces on a phone screen"
+        />
+        <h3 class="mt-10 text-xl">
+          Our aim is to foster motivation for learning
+        </h3>
+        <Divider class="mt-4" />
+        <div class="text-sm">
+          <p class="mt-4">
+            We respect that every learner has different sources for motivation.
+            What unites most of us humans since our childhood, is that we like
+            to play and that we learn through play.
+          </p>
+          <p class="mt-4">
+            The Elever system enables you, Learning & Development organizations
+            and trainers, to create learning games and manage multiple
+            motivators in one “Gamification Management System”. The learning
+            experiences you create are based on the individual situation of your
+            cohort. Micro learning activities help them to build a healthy
+            weekly habit. This keeps engagement and retention rates high.
+          </p>
+        </div>
+        <Image
+          class="mt-12"
+          src={LearningGroup}
+          alt="Illustration of a person sitting on a stack of books and learning."
+        />
+        <h3 class="mt-10 text-xl">
+          Personalized and emotional learning make a big difference
+        </h3>
+        <Divider class="mt-4" />
+        <div class="text-sm">
+          <p class="mt-4">
+            With the Elever App you can create mini games based on your specific
+            content, topics and group of learners. Interacting with those games
+            becomes an enjoyable act of learning for learners from every
+            generation. Employees, apprentices and students who learn with
+            Elever share an interest in learning, fostering a sense of
+            integration and community.
+          </p>
+          <p class="mt-4">
+            As a result, learners develop an emotional and lasting connection
+            with the study topic and content. They enjoy working more for their
+            employer and engaging with their peers. Furthermore,they achieve
+            better grades when they prepare for an exam with the Elever App.
+          </p>
+        </div>
+      </section>
+      <section class="mt-12">
+        <h2 class="text-center text-xs">MODULES</h2>
+        <div class="mt-4 text-sm">
+          <p class="mt-4">
+            Over the past few years, we have built a powerful system and created
+            a collection of games and features, to provide the functionality
+            that supports motivation and personalized learning. The Elever
+            system consists of a Mobile App, a Web App, and a Content Management
+            System that includes an authoring system.
+          </p>
+          <p class="mt-4">
+            Each module is accessible via the CMS and is designed to foster
+            curiosity among learners. They engage in collaborative, relevant,
+            and appropriately challenging tasks that enable them to acquire the
+            knowledge necessary to thrive in developing their competencies and
+            skills development.
+          </p>
+        </div>
+        <h3 class="text-5xl">Meet the modules</h3>
+        <div class="mt-12 grid grid-cols-2 gap-x-3 gap-y-2">
+          {
+            moduleIllustrations.map((module) => (
+              <Image
+                class="even:mt-16"
+                src={module.default}
+                alt="Elever screenshot"
+              />
+            ))
+          }
+        </div>
+        <Button text="Get more information" class="mt-10" href="#" />
+      </section>
+      <section class="mt-12">
+        <h2 class="text-center text-sm">CMS</h2>
+        <h3 class="mt-8 text-xl">
+          Automate and distribute your content in minutes with our CMS
+        </h3>
+        <Divider class="mt-4" />
+        <div class="text-xm">
+          <p class="mt-4">
+            Prepare and customize an educational experience that fulfills your
+            company’s needs. Set the time for activities, offer points and
+            rewards, or challenge your students to appear in the top positions
+            on the leaderboard.
+          </p>
+          <p class="mt-4">
+            If needed, a trainer can have a one-on-one conversation with
+            students via our chat.
+          </p>
+        </div>
+        <Image
+          class="mt-14"
+          src={Builders}
+          alt="Illustration of our team building your custom soution."
+        />
+        <div>
+          {
+            desktopScreenshots.map((screenshot) => (
+              <Image
+                class="mt-10"
+                src={screenshot.default}
+                alt="Elever screenshot"
+              />
+            ))
+          }
+        </div>
+        <h3 class="mt-12">
+          Track and evaluate student progress whenever you want
+        </h3>
+        <Divider class="mt-4" />
+        <div class="text-sm">
+          <p class="mt-4">
+            Metrics are crucial for understanding and improving learning
+            outcomes, identifying areas needing attention, and ensuring every
+            student reaches their full potential.
+          </p>
+          <p class="mt-4">
+            With our system, trainers, HR departments, company’s managers,
+            school educators, and others can diagnose which students or groups
+            of students need attention and adjust the strategy or reinforce the
+            course activities in real time.
+          </p>
+        </div>
+        <Image
+          class="mt-14"
+          src={Metrics}
+          alt="Illustration of engagement and participation metrics."
+        />
+      </section>
+    </div>
+    <footer class="bg-gradient-to-t from-[#44AD8A66] to-background px-14 py-10">
+      <h2 class="text-center text-xs">CONTACT</h2>
+      <h3 class="mt-6 text-center text-5xl font-semibold text-green">
+        Get in touch
+      </h3>
+      <div class="mt-6">
+        <svg
+          width="95"
+          height="23"
+          viewBox="0 0 95 23"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g opacity="0.5">
+            <path
+              d="M11.6504 22.059C11.6504 22.059 15.3203 11.5825 26.1629 11.4063C37.0055 11.0583 33.1548 17.8648 44.5216 16.8207C55.8885 15.7722 51.6897 3.02692 69.5242 0.233803C87.3586 -2.38757 94.8793 22.059 94.8793 22.059H11.6504Z"
+              fill="#05FF00"></path>
+          </g>
+          <path
+            d="M0.121094 11.5588C0.121094 11.5588 1.96058 6.31156 7.38413 6.22569C12.8077 6.04943 10.8823 9.46173 16.568 8.93745C22.2537 8.41318 20.1566 2.02698 29.0783 0.630421C38.0001 -0.680264 41.7649 11.5633 41.7649 11.5633H0.121094V11.5588Z"
+            fill="#44AD8D"></path>
+        </svg>
+      </div>
+      <Divider class="mt-6" />
+      <div class="text-sm">
+        <p class="mt-4">
+          Do you want to transform learning routines and build lasting habits
+          for the teams in an organization or company? Request our demo and
+          learn about gamification with the experts while playing the quiz we
+          have prepared for you.
+        </p>
+        <p class="mt-4">
+          Would you like to see your content within one of our games? Drop us a
+          line and discover how we can run a project together.
+        </p>
+      </div>
+      <ContactForm />
+      <Image
+        class="mx-auto mt-20"
+        src={PlaneGuys}
+        alt="Illustration of people flying in a paper plane."
+      />
+      <div class="mt-14">
+        <span class="text-xl">A product by</span>
+      </div>
+      <Image class="mt-5" src={AltusForgeLogo} alt="Altus Forge logo" />
+      <address class="mt-16 text-sm leading-relaxed">
+        Altus Forge GmbH<br />
+        Heinrichstrasse 267a<br />
+        8005 Zürich, Switzerland
+      </address>
+      <div class="mt-3">
+        <a class="text-cyan text-3xl" href="https://altusforge.com"
+          >altusforge.com</a
+        >
+      </div>
+    </footer>
   </body>
 </html>

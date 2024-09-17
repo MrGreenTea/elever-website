@@ -2,7 +2,26 @@
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      fontSize: {
+        "5xl": ["2.75rem", "2.5rem"],
+      },
+    },
+    fontFamily: {
+      sans: ["Inter", "sans-serif"],
+    },
+    colors: {
+      background: "#0D0D0D",
+      white: "#FFFFFF",
+      grey: "#212021",
+      green: "#00FF26",
+      cyan: "#17A79A",
+      purple: {
+        dark: "#39227F",
+        light: "#906DFD",
+        bright: "#B59DFF",
+      },
+    },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
