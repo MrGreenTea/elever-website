@@ -8,7 +8,17 @@ export default {
       },
     },
     fontFamily: {
-      sans: ["Inter", "sans-serif"],
+      sans: [
+        "Inter Variable",
+        "Inter",
+        "ui-sans-serif",
+        "system-ui",
+        "sans-serif",
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji",
+      ],
     },
     colors: {
       background: "#0D0D0D",
