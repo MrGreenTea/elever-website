@@ -3,10 +3,12 @@ const { class: className } = Astro.props;
 const colors = ["#21E31D", "#57CDFB", "#83ADFC", "#906DFD"];
 ---
 
-<div class={"flex w-full " + className}>
-  {
-    colors.map((color) => (
-      <div class="h-1 w-full" style={`background-color: ${color}`} />
-    ))
-  }
+<div class={className}>
+  <div class="flex w-full">
+    {
+      colors.map((color) => (
+        <div class="h-1 w-full" style={`background-color: ${color}`} />
+      ))
+    }
+  </div>
 </div>

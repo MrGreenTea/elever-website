@@ -1,22 +1,23 @@
 ---
-const { text, href, class: className } = Astro.props;
+const { text, href, class: className = "" } = Astro.props;
 ---
 
-<a
-  class={`text-sm inline-flex items-center justify-center gap-x-1.5 w-full py-4 px-8 rounded-md shadow-sm bg-primary text-white bg-grey border-white border ` +
-    className}
-  href={href}
->
-  {text}
-  <!-- Chevron Right-->
-  <svg
-    class="h-4 w-4"
-    viewBox="0 0 7 12"
-    fill="currentColor"
-    aria-hidden="true"
+<div class={className}>
+  <a
+    class="bg-primary inline-flex w-fit items-center justify-center gap-x-1.5 rounded-md border border-white bg-grey px-8 py-4 text-sm text-white shadow-sm"
+    href={href}
   >
-    <path
-      d="M0.809387 0.177979C0.93634 0.0510254 1.11407 0.0510254 1.24103 0.177979L6.57306 5.48462C6.67462 5.61157 6.67462 5.78931 6.57306 5.91626L1.24103 11.2229C1.11407 11.3499 0.93634 11.3499 0.809387 11.2229L0.301575 10.7405C0.200012 10.6135 0.200012 10.4104 0.301575 10.3088L4.89728 5.68774L0.301575 1.09204C0.200012 0.990479 0.200012 0.787354 0.301575 0.6604L0.809387 0.177979Z"
-      fill="white"></path>
-  </svg>
-</a>
+    {text}
+    <!-- Chevron Right-->
+    <svg
+      class="h-4 w-4"
+      viewBox="0 0 7 12"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path
+        d="M0.809387 0.177979C0.93634 0.0510254 1.11407 0.0510254 1.24103 0.177979L6.57306 5.48462C6.67462 5.61157 6.67462 5.78931 6.57306 5.91626L1.24103 11.2229C1.11407 11.3499 0.93634 11.3499 0.809387 11.2229L0.301575 10.7405C0.200012 10.6135 0.200012 10.4104 0.301575 10.3088L4.89728 5.68774L0.301575 1.09204C0.200012 0.990479 0.200012 0.787354 0.301575 0.6604L0.809387 0.177979Z"
+        fill="white"></path>
+    </svg>
+  </a>
+</div>

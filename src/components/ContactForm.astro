@@ -1,8 +1,8 @@
-<form class="mt-10">
-  <div class="grid grid-cols-1 gap-7">
+<form>
+  <div class="grid grid-cols-1 gap-7 lg:grid-cols-2">
     <label class="sr-only" for="name">Name</label>
     <input
-      class="bg-purple-dark border-purple-light placeholder:text-purple-bright ring-gray-300 block rounded-sm border p-1.5 shadow-sm ring-1 ring-inset"
+      class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:p-4"
       id="name"
       type="text"
       placeholder="Your name"
@@ -10,7 +10,7 @@
 
     <label class="sr-only" for="company">Company</label>
     <input
-      class="bg-purple-dark border-purple-light placeholder:text-purple-bright ring-gray-300 block rounded-sm border p-1.5 shadow-sm ring-1 ring-inset"
+      class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:p-4"
       id="company"
       type="text"
       placeholder="Your company"
@@ -18,7 +18,7 @@
 
     <label class="sr-only" for="email">Email</label>
     <input
-      class="bg-purple-dark border-purple-light placeholder:text-purple-bright ring-gray-300 block rounded-sm border p-1.5 shadow-sm ring-1 ring-inset"
+      class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:p-4"
       id="email"
       type="email"
       placeholder="Email"
@@ -26,7 +26,7 @@
 
     <label class="sr-only" for="phone">Phone</label>
     <input
-      class="bg-purple-dark border-purple-light placeholder:text-purple-bright ring-gray-300 block rounded-sm border p-1.5 shadow-sm ring-1 ring-inset"
+      class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:p-4"
       id="phone"
       type="text"
       placeholder="Your phone"
@@ -35,7 +35,7 @@
     <label class="sr-only" for="message">Message</label>
     <textarea
       rows="3"
-      class="bg-purple-dark border-purple-light placeholder:text-purple-bright ring-gray-300 block rounded-sm border p-1.5 shadow-sm ring-1 ring-inset"
+      class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:col-span-2 lg:p-4"
       require('@tailwindcss
       forms'),id="message"
       placeholder="Message"></textarea>
@@ -43,7 +43,7 @@
 
   <button
     type="submit"
-    class="bg-primary mt-10 inline-flex w-full items-center justify-center gap-x-1.5 rounded-md border border-white bg-grey px-8 py-4 text-sm text-white shadow-sm"
+    class="bg-primary mt-11 inline-flex w-full items-center justify-center gap-x-1.5 rounded-md border border-white bg-grey px-8 py-4 text-sm text-white shadow-sm lg:mt-10 lg:max-w-48"
     >Send</button
   >
 </form>
