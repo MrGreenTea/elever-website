@@ -16,6 +16,8 @@ import Metrics from "../assets/Metrics.svg";
 import PlaneGuys from "../assets/plane_guys.svg";
 import AltusForgeLogo from "../assets/AF Logo.svg";
 
+import content from "../content/en/home.ts";
+
 const moduleIllustrations = await Astro.glob("../assets/modules/*.svg");
 const desktopScreenshots = await Astro.glob("../assets/screenshots/*.svg");
 ---
@@ -26,7 +28,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.svg");
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Elever</title>
+    <title>{content.title}</title>
   </head>
   <body class="bg-background text-white">
     <Navbar />
@@ -36,15 +38,13 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.svg");
           <section class="lg:flex lg:items-center">
             <div>
               <h1 class="text-5xl font-semibold leading-tight lg:text-8xl">
-                The Elever App
+                {content.hero.title}
               </h1>
               <Divider class="mt-6 lg:mt-8" />
               <h2 class="mt-4 text-xl lg:mt-8 lg:text-6xl">
-                Transform learning routines
+                {content.hero.subtitle}
               </h2>
-              <p class="mt-3 text-sm lg:text-4xl">
-                Build lasting habits with the touch of one finger
-              </p>
+              <p class="mt-3 text-sm lg:text-4xl">{content.hero.subtitle}</p>
               <div class="mt-12 hidden lg:block">
                 <Button text="Request a demo" href="#" />
               </div>
@@ -59,94 +59,52 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.svg");
             </div>
           </section>
           <section class="mt-10">
-            <h2 class="text-center text-xs lg:text-2xl">VALUE PROPOSITION</h2>
+            <h2 class="text-center text-xs lg:text-2xl">
+              {content.valueProposition.title}
+            </h2>
             <div
               class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-x-16 lg:gap-y-72"
             >
-              <Image
-                class="mt-8 w-full"
-                src={RobotWithModules}
-                alt="Illustration of people adding puzzle pieces on a phone screen"
-              />
-              <div>
-                <h3 class="mt-10 text-xl lg:text-4xl">
-                  Our aim is to foster motivation for learning
-                </h3>
-                <Divider class="mt-4 lg:my-12" />
-                <div class="text-sm leading-relaxed lg:text-lg">
-                  <p class="mt-4">
-                    We respect that every learner has different sources for
-                    motivation. What unites most of us humans since our
-                    childhood, is that we like to play and that we learn through
-                    play.
-                  </p>
-                  <p class="mt-4">
-                    The Elever system enables you, Learning & Development
-                    organizations and trainers, to create learning games and
-                    manage multiple motivators in one “Gamification Management
-                    System”. The learning experiences you create are based on
-                    the individual situation of your cohort. Micro learning
-                    activities help them to build a healthy weekly habit. This
-                    keeps engagement and retention rates high.
-                  </p>
-                </div>
-              </div>
-              <Image
-                class="mt-12 w-full"
-                src={LearningGroup}
-                alt="Illustration of a person sitting on a stack of books and learning."
-              />
-              <div>
-                <h3 class="mt-10 text-xl lg:text-4xl">
-                  Personalized and emotional learning make a big difference
-                </h3>
-                <Divider class="mt-4 lg:my-12" />
-                <div class="text-sm leading-relaxed lg:text-lg">
-                  <p class="mt-4">
-                    With the Elever App you can create mini games based on your
-                    specific content, topics and group of learners. Interacting
-                    with those games becomes an enjoyable act of learning for
-                    learners from every generation. Employees, apprentices and
-                    students who learn with Elever share an interest in
-                    learning, fostering a sense of integration and community.
-                  </p>
-                  <p class="mt-4">
-                    As a result, learners develop an emotional and lasting
-                    connection with the study topic and content. They enjoy
-                    working more for their employer and engaging with their
-                    peers. Furthermore,they achieve better grades when they
-                    prepare for an exam with the Elever App.
-                  </p>
-                </div>
-              </div>
+              {
+                content.valueProposition.sections.map((section, i) => (
+                  <>
+                    <Image
+                      class="mt-8 w-full"
+                      src={i === 0 ? RobotWithModules : LearningGroup}
+                      alt="Illustration of people adding puzzle pieces on a phone screen"
+                    />
+                    <div>
+                      <h3 class="mt-10 text-xl lg:text-4xl">{section.title}</h3>
+                      <Divider class="mt-4 lg:my-12" />
+                      <div class="text-sm leading-relaxed lg:text-lg">
+                        {section.description.map((paragraph) => (
+                          <p class="mt-4">{paragraph}</p>
+                        ))}
+                      </div>
+                    </div>
+                  </>
+                ))
+              }
             </div>
           </section>
           <section class="mt-12">
-            <h2 class="text-center text-xs lg:text-2xl">MODULES</h2>
+            <h2 class="text-center text-xs lg:text-2xl">
+              {content.modules.title}
+            </h2>
             <div
               class="mx-auto mt-4 max-w-prose text-sm leading-relaxed lg:text-lg"
             >
-              <p class="mt-4">
-                Over the past few years, we have built a powerful system and
-                created a collection of games and features, to provide the
-                functionality that supports motivation and personalized
-                learning. The Elever system consists of a Mobile App, a Web App,
-                and a Content Management System that includes an authoring
-                system.
-              </p>
-              <p class="mt-4">
-                Each module is accessible via the CMS and is designed to foster
-                curiosity among learners. They engage in collaborative,
-                relevant, and appropriately challenging tasks that enable them
-                to acquire the knowledge necessary to thrive in developing their
-                competencies and skills development.
-              </p>
+              {
+                content.modules.description.map((paragraph) => (
+                  <p class="mt-4">{paragraph}</p>
+                ))
+              }
             </div>
             <Divider
               class="mx-auto hidden max-w-prose lg:mb-12 lg:mt-24 lg:flex"
             />
             <h3 class="text-center text-5xl text-purple-light lg:text-8xl">
-              Meet the modules
+              {content.modules.subtitle}
             </h3>
             <div
               class="mt-12 grid grid-cols-2 gap-x-3 gap-y-2 lg:mt-24 lg:grid-cols-4 lg:gap-x-8"
@@ -166,24 +124,19 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.svg");
             </div>
           </section>
           <section class="pt-12 lg:mt-20">
-            <h2 class="text-center text-sm lg:text-2xl">CMS</h2>
+            <h2 class="text-center text-sm lg:text-2xl">{content.cms.title}</h2>
             <div class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-x-12">
               <div>
                 <h3 class="mt-8 text-xl lg:text-4xl">
-                  Automate and distribute your content in minutes with our CMS
+                  {content.cms.sections[0].title}
                 </h3>
                 <Divider class="mt-4 lg:mb-12 lg:mt-8" />
                 <div class="text-xs leading-relaxed lg:text-lg">
-                  <p class="mt-4">
-                    Prepare and customize an educational experience that
-                    fulfills your company’s needs. Set the time for activities,
-                    offer points and rewards, or challenge your students to
-                    appear in the top positions on the leaderboard.
-                  </p>
-                  <p class="mt-4">
-                    If needed, a trainer can have a one-on-one conversation with
-                    students via our chat.
-                  </p>
+                  {
+                    content.cms.sections[0].description.map((paragraph) => (
+                      <p class="mt-4">{paragraph}</p>
+                    ))
+                  }
                 </div>
               </div>
               <Image
@@ -202,21 +155,15 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.svg");
               }
               <div class="lg:col-start-2">
                 <h3 class="mt-12 text-xl lg:text-4xl">
-                  Track and evaluate student progress whenever you want
+                  {content.cms.sections[1].title}
                 </h3>
                 <Divider class="mt-4 lg:mb-12 lg:mt-8" />
                 <div class="text-sm leading-relaxed lg:text-lg">
-                  <p class="mt-4">
-                    Metrics are crucial for understanding and improving learning
-                    outcomes, identifying areas needing attention, and ensuring
-                    every student reaches their full potential.
-                  </p>
-                  <p class="mt-4">
-                    With our system, trainers, HR departments, company’s
-                    managers, school educators, and others can diagnose which
-                    students or groups of students need attention and adjust the
-                    strategy or reinforce the course activities in real time.
-                  </p>
+                  {
+                    content.cms.sections[1].description.map((paragraph) => (
+                      <p class="mt-4">{paragraph}</p>
+                    ))
+                  }
                 </div>
               </div>
               <Image
@@ -233,11 +180,11 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.svg");
       class="bg-gradient-to-b from-background to-[#122722] px-14 py-10 lg:py-20"
     >
       <div class="mx-auto max-w-3xl">
-        <h2 class="text-center text-xs lg:text-2xl">CONTACT</h2>
+        <h2 class="text-center text-xs lg:text-2xl">{content.contact.title}</h2>
         <h3
-          class="text-green-neon mt-6 text-center text-5xl font-semibold lg:text-8xl"
+          class="mt-6 text-center text-5xl font-semibold text-green-neon lg:text-8xl"
         >
-          Get in touch
+          {content.contact.subtitle}
         </h3>
         <div class="mx-auto mt-6 w-24 lg:mt-14 lg:w-40">
           <svg
@@ -257,16 +204,11 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.svg");
         </div>
         <Divider class="mt-6 lg:mb-14 lg:mt-20" />
         <div class="text-sm leading-loose lg:text-lg">
-          <p class="mt-4">
-            Do you want to transform learning routines and build lasting habits
-            for the teams in an organization or company? Request our demo and
-            learn about gamification with the experts while playing the quiz we
-            have prepared for you.
-          </p>
-          <p class="mt-4 lg:mt-8">
-            Would you like to see your content within one of our games? Drop us
-            a line and discover how we can run a project together.
-          </p>
+          {
+            content.contact.description.map((paragraph) => (
+              <p class="mt-4">{paragraph}</p>
+            ))
+          }
         </div>
         <div class="mt-10 lg:mt-16">
           <ContactForm />
@@ -278,13 +220,18 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.svg");
         />
       </div>
       <div class="mt-14">
-        <span class="text-xl">A product by</span>
+        <span class="text-xl">{content.footer.productBy}</span>
       </div>
       <Image class="mt-5" src={AltusForgeLogo} alt="Altus Forge logo" />
       <address class="mt-16 text-sm leading-relaxed lg:text-lg">
-        Altus Forge GmbH<br />
-        Heinrichstrasse 267a<br />
-        8005 Zürich, Switzerland
+        {
+          content.footer.address.map((line) => (
+            <>
+              {line}
+              <br />
+            </>
+          ))
+        }
       </address>
       <div class="mt-3">
         <a class="text-3xl text-cyan" href="https://altusforge.com"

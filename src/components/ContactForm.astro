@@ -1,3 +1,8 @@
+---
+import homeContent from "../content/en/home.ts";
+const content = homeContent.contact;
+---
+
 <form>
   <div class="grid grid-cols-1 gap-7 lg:grid-cols-2">
     <label class="sr-only" for="name">Name</label>
@@ -5,7 +10,7 @@
       class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:p-4"
       id="name"
       type="text"
-      placeholder="Your name"
+      placeholder={content.fields.name}
     />
 
     <label class="sr-only" for="company">Company</label>
@@ -13,7 +18,7 @@
       class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:p-4"
       id="company"
       type="text"
-      placeholder="Your company"
+      placeholder={content.fields.company}
     />
 
     <label class="sr-only" for="email">Email</label>
@@ -21,7 +26,7 @@
       class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:p-4"
       id="email"
       type="email"
-      placeholder="Email"
+      placeholder={content.fields.email}
     />
 
     <label class="sr-only" for="phone">Phone</label>
@@ -29,21 +34,20 @@
       class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:p-4"
       id="phone"
       type="text"
-      placeholder="Your phone"
+      placeholder={content.fields.phone}
     />
 
     <label class="sr-only" for="message">Message</label>
     <textarea
       rows="3"
       class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:col-span-2 lg:p-4"
-      require('@tailwindcss
-      forms'),id="message"
-      placeholder="Message"></textarea>
+      id="message"
+      placeholder={content.fields.message}></textarea>
   </div>
 
   <button
     type="submit"
     class="bg-primary mt-11 inline-flex w-full items-center justify-center gap-x-1.5 rounded-md border border-white bg-grey px-8 py-4 text-sm text-white shadow-sm lg:mt-10 lg:max-w-48"
-    >Send</button
+    >{content.button}</button
   >
 </form>
