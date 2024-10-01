@@ -1,6 +1,10 @@
 ---
-import homeContent from "../content/en/home.ts";
-const content = homeContent.contact;
+import type { Content } from "../contents/types/home.ts";
+
+interface Props {
+  content: Content["contact"];
+}
+const { content } = Astro.props;
 ---
 
 <form>

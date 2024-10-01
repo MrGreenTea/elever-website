@@ -16,7 +16,13 @@ import Metrics from "../assets/Metrics.svg";
 import PlaneGuys from "../assets/plane_guys.svg";
 import AltusForgeLogo from "../assets/AF Logo.svg";
 
-import content from "../content/en/home.ts";
+import type { Content } from "../contents/types/home.ts";
+import defaultContent from "../contents/en/home.ts";
+
+interface Props {
+  content: Content;
+}
+const { content = defaultContent } = Astro.props;
 
 const moduleIllustrations = await Astro.glob("../assets/modules/*.svg");
 const desktopScreenshots = await Astro.glob("../assets/screenshots/*.svg");
@@ -211,7 +217,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.svg");
           }
         </div>
         <div class="mt-10 lg:mt-16">
-          <ContactForm />
+          <ContactForm content={content.contact} />
         </div>
         <Image
           class="mx-auto mt-20 w-full max-w-96 lg:mt-36"
