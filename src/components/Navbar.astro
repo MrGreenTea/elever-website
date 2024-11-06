@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 
 import EleverLogo from "../assets/SVG/im_elever_logo.svg";
+
+const otherLanguage = Astro.currentLocale == "de" ? "en" : "de";
 ---
 
 <header class="hidden lg:block">
@@ -61,24 +63,21 @@ import EleverLogo from "../assets/SVG/im_elever_logo.svg";
       >
         Login
       </a>
-      <a
-        href="#"
+      <div
         class="text-gray-900 inline-flex items-center justify-center gap-x-1.5 text-sm leading-8"
       >
-        EN
-        <!-- Chevron down -->
-        <svg
-          width="14"
-          height="9"
-          viewBox="0 0 14 9"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+        <a
+          class:list={{
+            "font-bold underline": Astro.currentLocale == "de",
+          }}
+          href="/de">DE</a
+        > / <a
+          class:list={{
+            "font-bold underline": Astro.currentLocale == "en",
+          }}
+          href="/en">EN</a
         >
-          <path
-            d="M13.2949 1.61426C13.4414 1.73145 13.4414 1.96582 13.2949 2.1123L7.17188 8.23535C7.02539 8.38184 6.82031 8.38184 6.67383 8.23535L0.550781 2.1123C0.404297 1.96582 0.404297 1.73145 0.550781 1.61426L1.10742 1.02832C1.25391 0.881836 1.48828 0.881836 1.60547 1.02832L6.9375 6.33105L12.2402 1.02832C12.3574 0.881836 12.5918 0.881836 12.7383 1.02832L13.2949 1.61426Z"
-            fill="white"></path>
-        </svg>
-      </a>
+      </div>
     </div>
   </nav>
 </header>
