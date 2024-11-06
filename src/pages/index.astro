@@ -121,7 +121,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
                     class="w-full even:mt-16"
                     src={module.default}
                     widths={[296, 592, 760, 900]}
-                    sizes="(max-width: 1024px) 25vw, 50vw"
+                    sizes="(min-width: 1480px) 296px, (min-width: 1040px) 21vw, calc(50vw - 62px)"
                     alt="Elever screenshot"
                   />
                 ))
@@ -158,7 +158,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
                     class="mt-10 w-full lg:mt-0 lg:even:mt-40"
                     src={screenshot.default}
                     widths={[256, 616, 900, 1112, 1232, 1450, 1650, 1820]}
-                    sizes="(max-width: 1024px) 50vw, 100vw"
+                    sizes="(min-width: 1480px) 616px, (min-width: 1040px) 42vw, calc(100vw - 112px)"
                     alt="Elever screenshot"
                   />
                 ))
