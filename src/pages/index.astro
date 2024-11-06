@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 import Navbar from "../components/Navbar.astro";
 import Divider from "../components/Divider.astro";
 import Button from "../components/Button.astro";
-import ContactForm from "../components/ContactForm.astro";
+import ContactForm from "../components/ContactForm.svelte";
 
 import HeroIllustration from "../assets/SVG/im_cover.svg";
 import RobotWithModules from "../assets/SVG/im_motivation.svg";
@@ -217,7 +217,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.svg");
           }
         </div>
         <div class="mt-10 lg:mt-16">
-          <ContactForm content={content.contact} />
+          <ContactForm client:load content={content.contact} />
         </div>
         <Image
           class="mx-auto mt-20 w-full max-w-96 lg:mt-36"
