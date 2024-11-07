@@ -37,7 +37,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
     <title>{content.title}</title>
   </head>
   <body class="bg-background text-white">
-    <Navbar />
+    <Navbar content={content.navigation} />
     <main class="pt-10 lg:mt-40">
       <div class="px-14 pb-10">
         <div class="mx-auto max-w-7xl">

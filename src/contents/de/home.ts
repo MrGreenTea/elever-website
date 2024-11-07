@@ -2,10 +2,18 @@ import type { Content } from "../types/home.ts";
 
 const content: Content = {
   title: "Startseite",
+  navigation: {
+    home: "Startseite",
+    modules: "Module",
+    usecases: "Use cases",
+    login: "Login",
+    openMenu: "Menü öffnen",
+  },
   hero: {
     title: "Die Elever App",
-    subtitle: "Lernroutinen transformieren",
-    description: "Dauerhafte Gewohnheiten mit nur einem Fingertipp aufbauen",
+    subtitle: "Transformieren Sie Lernroutinen",
+    description:
+      "Etablieren Sie dauerhafte Gewohnheiten. Spielerisch und mit einer mobilen App.",
   },
   valueProposition: {
     title: "WERTVERSPRECHEN",
@@ -18,7 +26,8 @@ const content: Content = {
         ],
       },
       {
-        title: "Personalisiertes und emotionales Lernen machen einen großen Unterschied",
+        title:
+          "Personalisiertes und emotionales Lernen machen einen großen Unterschied",
         description: [
           "Mit der Elever App können Sie Mini-Spiele basierend auf Ihren spezifischen Inhalten, Themen und Lernergruppen erstellen. Die Interaktion mit diesen Spielen wird für Lernende jeder Generation zu einem angenehmen Lernakt. Mitarbeiter, Auszubildende und Studenten, die mit Elever lernen, teilen ein Interesse am Lernen und fördern ein Gefühl der Integration und Gemeinschaft.",
           "Als Ergebnis entwickeln die Lernenden eine emotionale und dauerhafte Verbindung zum Lernthema und -inhalt. Sie arbeiten gerne mehr für ihren Arbeitgeber und engagieren sich mit ihren Kollegen. Darüber hinaus erzielen sie bessere Noten, wenn sie sich mit der Elever App auf eine Prüfung vorbereiten.",
@@ -39,14 +48,16 @@ const content: Content = {
     title: "CMS",
     sections: [
       {
-        title: "Automatisieren und verteilen Sie Ihre Inhalte in Minuten mit unserem CMS",
+        title:
+          "Automatisieren und verteilen Sie Ihre Inhalte in Minuten mit unserem CMS",
         description: [
           "Bereiten Sie eine Lernerfahrung vor und passen Sie sie an die Bedürfnisse Ihres Unternehmens an. Legen Sie die Zeit für Aktivitäten fest, bieten Sie Punkte und Belohnungen an oder fordern Sie Ihre Studenten heraus, in den Spitzenpositionen der Bestenliste zu erscheinen.",
           "Bei Bedarf kann ein Trainer über unseren Chat ein Einzelgespräch mit den Studenten führen.",
         ],
       },
       {
-        title: "Verfolgen und bewerten Sie den Fortschritt der Studenten, wann immer Sie möchten",
+        title:
+          "Verfolgen und bewerten Sie den Fortschritt der Studenten, wann immer Sie möchten",
         description: [
           "Metriken sind entscheidend, um Lernergebnisse zu verstehen und zu verbessern, Bereiche zu identifizieren, die Aufmerksamkeit benötigen, und sicherzustellen, dass jeder Student sein volles Potenzial ausschöpft.",
           "Mit unserem System können Trainer, Personalabteilungen, Unternehmensmanager, Schulpädagogen und andere diagnostizieren, welche Studenten oder Gruppen von Studenten Aufmerksamkeit benötigen, und die Strategie anpassen oder die Kursaktivitäten in Echtzeit verstärken.",

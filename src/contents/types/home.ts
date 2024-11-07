@@ -1,5 +1,12 @@
 export type Content = {
   title: string;
+  navigation: {
+    home: string;
+    modules: string;
+    usecases: string;
+    login: string;
+    openMenu: string;
+  };
   hero: {
     title: string;
     subtitle: string;

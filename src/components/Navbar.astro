@@ -1,9 +1,14 @@
 ---
 import { Image } from "astro:assets";
 
+import type { Content } from "../contents/types/home.ts";
+
 import EleverLogo from "../assets/SVG/im_elever_logo.svg";
 
-const otherLanguage = Astro.currentLocale == "de" ? "en" : "de";
+interface Props {
+  content: Content["navigation"];
+}
+const { content } = Astro.props;
 ---
 
 <header class="hidden lg:block">
@@ -13,7 +18,7 @@ const otherLanguage = Astro.currentLocale == "de" ? "en" : "de";
   >
     <div class="flex lg:flex-1">
       <a href="#" class="-m-1.5 p-1.5">
-        <span class="sr-only">Your Company</span>
+        <span class="sr-only">Elever by AltusForge</span>
         <Image class="h-8 w-auto" src={EleverLogo} alt="" />
       </a>
     </div>
@@ -22,7 +27,7 @@ const otherLanguage = Astro.currentLocale == "de" ? "en" : "de";
         type="button"
         class="text-gray-700 -m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
       >
-        <span class="sr-only">Open main menu</span>
+        <span class="sr-only">{content.openMenu}</span>
         <svg
           class="h-6 w-6"
           fill="none"
@@ -48,21 +53,18 @@ const otherLanguage = Astro.currentLocale == "de" ? "en" : "de";
       <a
         href="/modules"
         class="text-gray-900 border-b-2 border-transparent text-sm leading-8"
+        >{content.modules}</a
       >
-        Modules
-      </a>
       <a
         href="/use-cases"
         class="text-gray-900 border-b-2 border-transparent text-sm leading-8"
+        >{content.usecases}</a
       >
-        Use cases
-      </a>
       <a
         href="https://app.elever.ch"
         class="text-gray-900 border-b-2 border-transparent text-sm leading-8"
+        >{content.login}</a
       >
-        Login
-      </a>
       <div
         class="text-gray-900 inline-flex items-center justify-center gap-x-1.5 text-sm leading-8"
       >
