@@ -17,18 +17,20 @@ import PlaneGuys from "../assets/SVG/im_contact.svg";
 import AltusForgeLogo from "../assets/AF Logo.svg";
 
 import type { Content } from "../contents/types/home.ts";
-import defaultContent from "../contents/en/home.ts";
+import defaultContent from "../contents/de/home.ts";
+import defaultNavigation from "../contents/de/navbar.ts";
 
 interface Props {
+  lang: "en" | "de";
   content: Content;
 }
-const { content = defaultContent } = Astro.props;
+const { content = defaultContent, lang = Astro.currentLocale } = Astro.props;
 
 const moduleIllustrations = await Astro.glob("../assets/modules/*.png");
 const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
 ---
 
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -37,7 +39,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
     <title>{content.title}</title>
   </head>
   <body class="bg-background text-white">
-    <Navbar content={content.navigation} />
+    <Navbar currentPage="/" content={defaultNavigation} />
     <main class="pt-10 lg:mt-40">
       <div class="px-14 pb-10">
         <div class="mx-auto max-w-7xl">

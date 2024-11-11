@@ -2,13 +2,6 @@ import type { Content } from "../types/home.ts";
 
 const content: Content = {
   title: "Home",
-  navigation: {
-    home: "Home",
-    modules: "Modules",
-    usecases: "Use cases",
-    login: "Login",
-    openMenu: "Open menu",
-  },
   hero: {
     title: "The Elever App",
     subtitle: "Transform learning routines",
