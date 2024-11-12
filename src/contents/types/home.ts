@@ -8,9 +8,16 @@ export type Content = {
   valueProposition: {
     title: string;
     sections: {
-      title: string;
-      description: string[];
-    }[];
+      ourAim: {
+        title: string;
+        description: string[];
+      };
+      personalizedLearning: {
+        title: string;
+        description: string[];
+      };
+    };
+    forgettingCurveTitle: string;
   };
   modules: {
     title: string;

@@ -10,15 +10,15 @@ const content: Content = {
   },
   valueProposition: {
     title: "WERTVERSPRECHEN",
-    sections: [
-      {
+    sections: {
+      ourAim: {
         title: "Unser Ziel ist es, die Motivation zum Lernen zu fördern",
         description: [
           "Wir respektieren, dass jeder Lernende unterschiedliche Motivationsquellen hat. Was die meisten von uns Menschen seit unserer Kindheit verbindet, ist, dass wir gerne spielen und durch Spiel lernen.",
           "Das Elever-System ermöglicht es Ihnen, Weiterbildungsorganisationen und Trainern, Lernspiele zu erstellen und mehrere Motivatoren in einem 'Gamification Management System' zu verwalten. Die von Ihnen erstellten Lernerfahrungen basieren auf der individuellen Situation Ihrer Kohorte. Mikro-Lernaktivitäten helfen ihnen, eine gesunde wöchentliche Gewohnheit aufzubauen. Dies hält die Engagement- und Retentionsraten hoch.",
         ],
       },
-      {
+      personalizedLearning: {
         title:
           "Personalisiertes und emotionales Lernen machen einen großen Unterschied",
         description: [
@@ -26,7 +26,8 @@ const content: Content = {
           "Als Ergebnis entwickeln die Lernenden eine emotionale und dauerhafte Verbindung zum Lernthema und -inhalt. Sie arbeiten gerne mehr für ihren Arbeitgeber und engagieren sich mit ihren Kollegen. Darüber hinaus erzielen sie bessere Noten, wenn sie sich mit der Elever App auf eine Prüfung vorbereiten.",
         ],
       },
-    ],
+    },
+    forgettingCurveTitle: "Der Vergessenskurve entgegenwirken",
   },
   modules: {
     title: "MODULE",

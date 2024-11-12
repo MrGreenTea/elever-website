@@ -9,22 +9,23 @@ const content: Content = {
   },
   valueProposition: {
     title: "VALUE PROPOSITION",
-    sections: [
-      {
+    sections: {
+      ourAim: {
         title: "Our aim is to foster motivation for learning",
         description: [
           "We respect that every learner has different sources for motivation. What unites most of us humans since our childhood, is that we like to play and that we learn through play.",
           "The Elever system enables you, Learning & Development organizations and trainers, to create learning games and manage multiple motivators in one “Gamification Management System”. The learning experiences you create are based on the individual situation of your cohort. Micro learning activities help them to build a healthy weekly habit. This keeps engagement and retention rates high.",
         ],
       },
-      {
+      personalizedLearning: {
         title: "Personalized and emotional learning make a big difference",
         description: [
           "With the Elever App you can create mini games based on your specific content, topics and group of learners. Interacting with those games becomes an enjoyable act of learning for learners from every generation. Employees, apprentices and students who learn with Elever share an interest in learning, fostering a sense of integration and community.",
           "As a result, learners develop an emotional and lasting connection with the study topic and content. They enjoy working more for their employer and engaging with their peers. Furthermore,they achieve better grades when they prepare for an exam with the Elever App.",
         ],
       },
-    ],
+    },
+    forgettingCurveTitle: "Counteract the forgetting curve",
   },
   modules: {
     title: "MODULES",
