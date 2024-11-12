@@ -1,0 +1,23 @@
+---
+import Navbar from "../components/Navbar.astro";
+import defaultNavigation from "../contents/de/navbar.ts";
+
+interface Props {
+  lang: "en" | "de";
+}
+const { lang = Astro.currentLocale } = Astro.props;
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Use Cases</title>
+  </head>
+  <body class="bg-background text-white">
+    <Navbar currentPage="/use-cases" content={defaultNavigation} />
+    <h1>Use Cases</h1>
+  </body>
+</html>
