@@ -1,0 +1,206 @@
+---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
+
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import defaultNavigation from "../contents/de/navbar.ts";
+import defaultFooter from "../contents/de/footer.ts";
+
+import EleverMobile from "../assets/im_modules-flying.svg";
+import ModuleParty from "../assets/modules/ModuleParty.svg";
+
+interface Props {
+  lang: "en" | "de";
+}
+const { lang = Astro.currentLocale } = Astro.props;
+
+const illustrationRegex = new RegExp(/ic_(\w+)\./);
+const gamesIllustrations: Map<string, ImageMetadata> = new Map(
+  (await Astro.glob("../assets/modules/games/*.svg")).map((game) => [
+    illustrationRegex.exec(game.default.src)![1],
+    game.default,
+  ]),
+);
+const toolsIllustrations: Map<string, ImageMetadata> = new Map(
+  (await Astro.glob("../assets/modules/tools/*.svg")).map((tool) => [
+    illustrationRegex.exec(tool.default.src)![1],
+    tool.default,
+  ]),
+);
+const games = [
+  {
+    title: "Adventures",
+    illustration: "adventures",
+    description:
+      "Our trivia game helps to train skills like critical thinking and reading comprehension as participants analyze questions and deduce answers under time constraints.",
+  },
+  {
+    title: "Question of the Week",
+    illustration: "qotw",
+    description:
+      "Words, phrases or images are partially revealed every day of the week, inviting players to participate in a collaborative problem-solving fun challenge.",
+  },
+  {
+    title: "Photo Event",
+    illustration: "photoevent",
+    description:
+      "Upload photos that capture the essence of a given topic. with this interactive game players exercise visual storytelling capabilities and interpretation abilities. ",
+  },
+  {
+    title: "Reflection",
+    illustration: "reflection",
+    description:
+      "Image or text is presented to students in order to deep thinking on a theme. Participants train expressive skills like writing. In parallel, they refine their ability to analyze and interpret.",
+  },
+  {
+    title: "Tip Game",
+    illustration: "tipgame",
+    description:
+      "A tailored game where predictive skills and conduct research take center stage in the excitement of real-world sport events and tournaments like the UEFA’s EURO. ",
+  },
+];
+
+const tools = [
+  {
+    title: "Reflection",
+    illustration: "assessment",
+    description:
+      "Our evaluation tool offers personalized insights and suggestions for improvement. Based on student results, it generates a comprehensive chart, visually mapping out  strengths and areas needing development.",
+  },
+  {
+    title: "Chat",
+    illustration: "chat",
+    description:
+      "This feature gives the trainers the power of transforming traditional education allowing them to provide timely feedback, answer questions promptly, and offer guidance tailored to each student's needs.",
+  },
+  {
+    title: "Leaderboard",
+    illustration: "leaderboard",
+    description:
+      "Adding a leaderboard can significantly enhance students' participation from a didactical perspective. This feature transforms individual learning efforts into a motivating collective experience.",
+  },
+  {
+    title: "Store",
+    illustration: "store",
+    description:
+      "Try a store with customizable rewards in the educational experience to motivate students. It can be filled up with symbolic  achievements as badges to tangible rewards depending on your organization.",
+  },
+  {
+    title: "Library",
+    illustration: "library",
+    description:
+      "This is a collection of audiovisual materials (provided by our customers) accesible to students with the intention of stimulating  the self-paced learning and empower them while complementing their knowledge.",
+  },
+  {
+    title: "Badges",
+    illustration: "achievements",
+    description:
+      "Top students receive special badges or exclusive characters as a reward for their efforts, fostering a sense of achievement and progression. They can collect these badges and complete a special set.",
+  },
+];
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Module</title>
+  </head>
+  <body class="bg-background text-white">
+    <div class="bg-[#020C57]">
+      <Navbar currentPage="/modules" content={defaultNavigation} />
+    </div>
+
+    <main>
+      <section class="bg-[#020C57] px-14 pt-10 lg:pt-40">
+        <div class="mx-auto max-w-7xl">
+          <h1 class="text-5xl font-semibold lg:text-8xl">Modules</h1>
+          <div class="mt-8 lg:px-36 lg:pt-14 lg:text-2xl">
+            <p>
+              Micro learning and game-like interactions enhance learning by
+              breaking down content into small, digestible segments and making
+              it interactive and fun. This is the Elever philosophy.
+            </p>
+            <p>
+              We have created a list of games that can adapt to specific
+              content, each designed to train different abilities, allowing
+              students to enjoy a dynamic, efficient, and effective learning
+              experience.
+            </p>
+          </div>
+          <Image
+            class="mx-auto mt-9 lg:mt-32"
+            alt="Elever Mobile App"
+            src={EleverMobile}
+          />
+        </div>
+      </section>
+      <div class="mx-auto max-w-7xl px-14 lg:pb-16">
+        <section class="py-10 text-center lg:py-20">
+          <h2 class="text-xs lg:text-2xl">GAMES</h2>
+          <div
+            class="mt-8 grid grid-cols-1 gap-y-14 lg:mt-20 lg:grid-cols-6 lg:gap-x-24 lg:gap-y-28"
+          >
+            {
+              games.map((game, i) => (
+                <div
+                  class="flex flex-col items-center text-center lg:col-span-2"
+                  class:list={{ "lg:col-start-2": i === 3 }}
+                >
+                  <Image
+                    class="mt-4 h-20 w-20 lg:mt-0"
+                    alt={game.title}
+                    src={gamesIllustrations.get(game.illustration)!}
+                  />
+
+                  <h3 class="mt-4 text-xl lg:mt-5 lg:text-2xl">{game.title}</h3>
+                  <p class="mt-5 max-w-xs text-sm lg:text-base">
+                    {game.description}
+                  </p>
+                </div>
+              ))
+            }
+          </div>
+        </section>
+        <section class="flex flex-col items-center">
+          <h2 class="text-center text-xs lg:text-2xl">Tools</h2>
+          <p class="mt-9 max-w-prose text-sm lg:mt-20 lg:text-2xl">
+            In Elever, is it possible to power up an educational experience
+            complementing the games available on our platform with other
+            specially designed elements that will ensure a suitable learning for
+            every group of trainees. Make your own combinations!
+          </p>
+          <div
+            class="mt-14 grid grid-cols-1 gap-y-14 lg:mt-20 lg:grid-cols-6 lg:gap-x-12 lg:gap-y-16"
+          >
+            {
+              tools.map((tool) => (
+                <div class="flex flex-col items-center text-center lg:col-span-2 lg:text-left">
+                  <Image
+                    class="mt-4 h-20 w-20"
+                    alt={tool.title}
+                    src={toolsIllustrations.get(tool.illustration)!}
+                  />
+                  <h3 class="mt-4 text-xl lg:text-2xl">{tool.title}</h3>
+                  <p class="mt-5 max-w-xs text-sm lg:text-base">
+                    {tool.description}
+                  </p>
+                </div>
+              ))
+            }
+          </div>
+          <Image
+            class="mt-14"
+            alt="People building their custom solution from our modules"
+            src={ModuleParty}
+          />
+        </section>
+      </div>
+    </main>
+    <!-- TODO: english-->
+    <Footer content={defaultFooter} />
+  </body>
+</html>
