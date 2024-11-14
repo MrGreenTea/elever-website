@@ -1,5 +1,9 @@
 ---
-const { text, href, class: className = "" } = Astro.props;
+interface Props {
+  href: string;
+  class?: string;
+}
+const { href, class: className = "" } = Astro.props;
 ---
 
 <div class={className}>
@@ -7,17 +11,19 @@ const { text, href, class: className = "" } = Astro.props;
     class="bg-primary inline-flex w-fit items-center justify-center gap-x-1.5 rounded-md border border-white bg-grey px-8 py-4 text-sm text-white shadow-sm"
     href={href}
   >
-    {text}
+    <slot />
     <!-- Chevron Right-->
     <svg
       class="h-4 w-4"
-      viewBox="0 0 7 12"
+      width="7"
+      height="13"
+      viewBox="0 0 7 13"
       fill="currentColor"
-      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M0.809387 0.177979C0.93634 0.0510254 1.11407 0.0510254 1.24103 0.177979L6.57306 5.48462C6.67462 5.61157 6.67462 5.78931 6.57306 5.91626L1.24103 11.2229C1.11407 11.3499 0.93634 11.3499 0.809387 11.2229L0.301575 10.7405C0.200012 10.6135 0.200012 10.4104 0.301575 10.3088L4.89728 5.68774L0.301575 1.09204C0.200012 0.990479 0.200012 0.787354 0.301575 0.6604L0.809387 0.177979Z"
-        fill="white"></path>
+        d="M0.609375 1.11523C0.736328 0.988281 0.914062 0.988281 1.04102 1.11523L6.37305 6.42188C6.47461 6.54883 6.47461 6.72656 6.37305 6.85352L1.04102 12.1602C0.914062 12.2871 0.736328 12.2871 0.609375 12.1602L0.101562 11.6777C0 11.5508 0 11.3477 0.101562 11.2461L4.69727 6.625L0.101562 2.0293C0 1.92773 0 1.72461 0.101562 1.59766L0.609375 1.11523Z"
+      ></path>
     </svg>
   </a>
 </div>
