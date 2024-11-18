@@ -65,7 +65,7 @@ const { content, currentPage } = Astro.props;
         ]}>{content.modules}</a
       >
       <a
-        href="/use-cases"
+        href={getRelativeLocaleUrl(Astro.currentLocale!, "/use-cases")}
         class="text-gray-900 border-b-2 text-sm leading-8"
         class:list={[
           currentPage === "/use-cases"
@@ -83,7 +83,8 @@ const { content, currentPage } = Astro.props;
       >
         <a
           class:list={{
-            "font-bold underline": Astro.currentLocale == "de",
+            "font-bold underline":
+              Astro.currentLocale == "de" || Astro.currentLocale == undefined,
           }}
           href={getRelativeLocaleUrl("de", currentPage)}>DE</a
         > / <a
