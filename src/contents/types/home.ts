@@ -4,6 +4,7 @@ export type Content = {
     title: string;
     subtitle: string;
     description: string;
+    callToAction: string;
   };
   valueProposition: {
     title: string;

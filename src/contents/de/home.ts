@@ -7,6 +7,7 @@ export default {
     subtitle: "Transformieren Sie Lernroutinen",
     description:
       "Etablieren Sie dauerhafte Gewohnheiten. Spielerisch und mit einer mobilen App.",
+    callToAction: "Demo Zugang anfragen",
   },
   valueProposition: {
     title: "Unser Versprechen",

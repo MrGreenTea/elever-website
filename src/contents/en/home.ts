@@ -6,6 +6,7 @@ export default {
     title: "The Elever App",
     subtitle: "Transform learning routines",
     description: "Establish lasting habits. Playfully and with a mobile app.",
+    callToAction: "Request demo access",
   },
   valueProposition: {
     title: "VALUE PROPOSITION",
