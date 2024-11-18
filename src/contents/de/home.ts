@@ -1,6 +1,6 @@
 import type { Content } from "../types/home.ts";
 
-const content: Content = {
+export default {
   title: "Startseite",
   hero: {
     title: "Die Elever App",
@@ -9,56 +9,53 @@ const content: Content = {
       "Etablieren Sie dauerhafte Gewohnheiten. Spielerisch und mit einer mobilen App.",
   },
   valueProposition: {
-    title: "WERTVERSPRECHEN",
+    title: "Unser Versprechen",
     sections: {
       ourAim: {
-        title: "Unser Ziel ist es, die Motivation zum Lernen zu fördern",
+        title: "Unser Ziel ist es, die Lern-Motivation zu fördern",
         description: [
-          "Wir respektieren, dass jeder Lernende unterschiedliche Motivationsquellen hat. Was die meisten von uns Menschen seit unserer Kindheit verbindet, ist, dass wir gerne spielen und durch Spiel lernen.",
-          "Das Elever-System ermöglicht es Ihnen, Weiterbildungsorganisationen und Trainern, Lernspiele zu erstellen und mehrere Motivatoren in einem 'Gamification Management System' zu verwalten. Die von Ihnen erstellten Lernerfahrungen basieren auf der individuellen Situation Ihrer Kohorte. Mikro-Lernaktivitäten helfen ihnen, eine gesunde wöchentliche Gewohnheit aufzubauen. Dies hält die Engagement- und Retentionsraten hoch.",
+          "Was uns Menschen seit der Kindheit verbindet, ist, dass wir gerne spielen und durch spielen lernen. Bei Elever glauben wir an die Möglichkeiten des Spiels auch im professionellen Umfeld.",
+          "Wir respektieren, dass verschiedene Lerntypen unterschiedliche Quellen der Motivation haben. Diese können wir grösstenteils mit unserem System adressieren. Elever ermöglicht es Ihnen und Ihrer Organisation im Bereich der Aus- und Weiterbildung, Lernspiele zu erstellen und verschiedene Motivationsfaktoren in einem „Gamification Management System“ zu verwalten. Die Lernpfade, die Sie erstellen, basieren auf der individuellen Situation der Gruppe.Micro - Learning - Aktivitäten helfen ihnen, eine regelmässige wöchentliche Gewohnheit zu entwickeln.Dies hält die Engagement - Raten noch, wirkt der Vergessenskurve entgegen und sorgt für den Transfer des Gelernten.",
         ],
       },
       personalizedLearning: {
         title:
-          "Personalisiertes und emotionales Lernen machen einen großen Unterschied",
+          "Personalisierte und emotionale Lernerlebnisse machen einen großen Unterschied",
         description: [
-          "Mit der Elever App können Sie Mini-Spiele basierend auf Ihren spezifischen Inhalten, Themen und Lernergruppen erstellen. Die Interaktion mit diesen Spielen wird für Lernende jeder Generation zu einem angenehmen Lernakt. Mitarbeiter, Auszubildende und Studenten, die mit Elever lernen, teilen ein Interesse am Lernen und fördern ein Gefühl der Integration und Gemeinschaft.",
-          "Als Ergebnis entwickeln die Lernenden eine emotionale und dauerhafte Verbindung zum Lernthema und -inhalt. Sie arbeiten gerne mehr für ihren Arbeitgeber und engagieren sich mit ihren Kollegen. Darüber hinaus erzielen sie bessere Noten, wenn sie sich mit der Elever App auf eine Prüfung vorbereiten.",
+          'Die Interaktionen mit für sie relevanten Inhalten und "ihren Leuten", die Sie mit den Mini-Spielen ermöglichen, werden für Lernende aus jeder Generation zu einem angenehmen Lernerlebnis. Mitarbeitende, Auszubildende und Studierende, die mit Elever lernen, entwickeln ein vermehrtes Interesse am Lernen. Die Lernerlebnisse fördern ein Gefühl der Integration, der Gemeinschaft und des Zusammenhalts.',
+          "Als Ergebnis entwickeln Lernende eine emotionale und dauerhafte Verbindung zum Thema und zum Inhalt. Sie identifizieren sich mehr mit ihrem Arbeitgeber und vernetzen sich mit den anderen Teilnehmenden. Darüber hinaus erzielen sie bessere Noten, wenn sie sich mit der Elever-App auf eine Prüfung vorbereiten.",
         ],
       },
     },
     forgettingCurveTitle: "Der Vergessenskurve entgegenwirken",
   },
   modules: {
-    title: "MODULE",
+    title: "Das sind unsere Module",
     description: [
-      "In den letzten Jahren haben wir ein leistungsfähiges System aufgebaut und eine Sammlung von Spielen und Funktionen erstellt, um die Funktionalität bereitzustellen, die Motivation und personalisiertes Lernen unterstützt. Das Elever-System besteht aus einer Mobile App, einer Web App und einem Content Management System, das ein Autorensystem umfasst.",
-      "Jedes Modul ist über das CMS zugänglich und darauf ausgelegt, die Neugier der Lernenden zu wecken. Sie engagieren sich in kollaborativen, relevanten und angemessen herausfordernden Aufgaben, die es ihnen ermöglichen, das notwendige Wissen zu erwerben, um in der Entwicklung ihrer Kompetenzen und Fähigkeiten zu gedeihen.",
+      "Im Laufe der letzten Jahre haben wir ein leistungsstarkes System aufgebaut. Es enthält eine umfangreiche Sammlung von Modulen und Funktionen, um umfassende spielerische Bildung zu organisieren. Damit ist es möglich, Motivation durch kurze, mobile und personalisierte Lerneinheiten zu unterstützen. Das Elever-System automatisiert ausserdem die Abläufe für Admins. Es besteht aus einer mobilen App, einer Web-App und einem Content-Management-System, das ein Autorensystem beinhaltet. Jedes Modul ist über das CMS zugänglich.",
+      "Es unterstützt Sie dabei, Ihre kreativen Ideen umzusetzen. Unser Tipp: Wecken Sie Neugier bei den Lernenden, übertreiben Sie ruhig mal und setzen Sie auch Komik ein. Auf Grund unserer Erfahrung und der Auswertungen können wir sagen, dass die Lernenden sich an kollaborativen, relevanten und angemessen herausfordernden Aufgaben rege beteiligen. Dabei erwerben sie das notwendige Wissen, um in der Entwicklung und Anwendung ihrer Fähigkeiten und Kompetenzen zu glänzen und ihr volles Potential aus zu schöpfen.",
     ],
-    subtitle: "Lernen Sie die Module kennen",
+    subtitle: "Beispiele unserer Module",
     callToAction: "Weitere Informationen erhalten",
   },
   cms: {
-    title: "CMS",
+    title: "CMS - Unser Content Management System",
     sections: [
       {
-        title:
-          "Automatisieren und verteilen Sie Ihre Inhalte in Minuten mit unserem CMS",
+        title: "Content-Automatisierung in seiner besten Form",
         description: [
-          "Bereiten Sie eine Lernerfahrung vor und passen Sie sie an die Bedürfnisse Ihres Unternehmens an. Legen Sie die Zeit für Aktivitäten fest, bieten Sie Punkte und Belohnungen an oder fordern Sie Ihre Studenten heraus, in den Spitzenpositionen der Bestenliste zu erscheinen.",
-          "Bei Bedarf kann ein Trainer über unseren Chat ein Einzelgespräch mit den Studenten führen.",
+          "Bereiten Sie ein personalisiertes Lernerlebnis vor, das die Bedürfnisse Ihrer Organisation erfüllt. Bestimmen Sie die Zeiten für Aktivitäten, bieten Sie Punkte und Belohnungen an oder fordern Sie Teilnehmende heraus, die Spitzenpositionen in der Rangliste zu erreichen. Sind die Regeln einmal festgelegt, lassen sich die Abläufe automatisieren und wiederholen. Ihnen bleibt (nur) noch die Auswertung der Ergebnisse und Beteiligung im CMS.",
         ],
       },
       {
         title:
-          "Verfolgen und bewerten Sie den Fortschritt der Studenten, wann immer Sie möchten",
+          "Verfolgen und bewerten Sie jederzeit den Fortschritt ihrer Lernenden",
         description: [
-          "Metriken sind entscheidend, um Lernergebnisse zu verstehen und zu verbessern, Bereiche zu identifizieren, die Aufmerksamkeit benötigen, und sicherzustellen, dass jeder Student sein volles Potenzial ausschöpft.",
-          "Mit unserem System können Trainer, Personalabteilungen, Unternehmensmanager, Schulpädagogen und andere diagnostizieren, welche Studenten oder Gruppen von Studenten Aufmerksamkeit benötigen, und die Strategie anpassen oder die Kursaktivitäten in Echtzeit verstärken.",
+          "Sie können Elever im Flipped Classroom Format, als Stand-alone Lösung, Kurs-begleitenden Lösung oder als Transfer-Lösung einsetzen. In jedem Format können Sie mit den Auswertungen Bereiche identifizieren, die Aufmerksamkeit benötigen. Besonders in Flipped Classroom settings, die auf einen einheitlichen Vorbereitungsstand angewiesen sind, geben die Auswertungen relevante Hinweise für etwaige Schwachpunkte und fehlende Beteiligung.",
+          "Falls erforderlich, können Kurs-Verantwortliche ein Gespräch mit den Teilnehmenden über die integrierte Chat Funktion starten.",
+          "Mit Elever können Ausbilder, Trainer, HR-Abteilungen und ihre relevanten Stakeholder analysieren, welche Lernende, Gruppen oder Bereiche Aufmerksamkeit benötigen, und die Strategie in Echtzeit anpassen oder Kursaktivitäten verstärken.",
         ],
       },
     ],
   },
-};
-
-export default content;
+} satisfies Content;
