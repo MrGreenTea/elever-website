@@ -1,62 +1,68 @@
 import type { Content } from "../types/use-cases";
 
 export default {
-  title: "Anwendungsfälle",
+  title: "Use Cases",
   description:
-    "Elever hat fast ein Jahrzehnt lang mit über 30 Institutionen zusammengearbeitet und das Lernen von 150.000 Lernenden beeinflusst. Hier sind einige unserer jüngsten Anwendungsfälle.",
+    "Elever has collaborated with over 30 institutions for nearly a decade, impacting the learning of 150,000 learners. Here are some of our more recent use cases.",
   sectionLabels: {
-    participants: "Teilnehmende",
-    modules: "Module",
-    results: "Ergebnisse",
-    fullUsecaseButton: "Den vollständigen Use case lesen",
+    participants: "Participants",
+    modules: "Modules",
+    results: "Results",
+    fullUsecaseButton: "Read the full use case (currently in German only)",
   },
   leadershipTraining: {
-    title: "Führungskräftetraining in einem Konzern",
+    title: "Leadership training in a Corporation",
     participants:
-      "16 Teilnehmende pro Kurs x 25 Kurse pro Jahr, ca. 400 pro Jahr.",
+      "16 participants per course x 25 courses per year, approx. 400 per year.",
     modules: [
-      "Abenteuer",
-      "Frage der Woche",
+      "Adventures",
+      "Question of the Week",
       "Reflexion",
-      "Bibliothek",
-      "Ranglisten",
-      "Abzeichen",
+      "Library",
+      "Leaderboard",
+      "Badges",
     ],
     results:
-      "69% der aktiven Teilnehmenden haben 68% der Inhalte bearbeitet. Dies stellt sicher, dass die Mehrheit der Teilnehmenden an den Seminartagen gut vorbereitet ist, die wesentlichen Inhalte verinnerlicht und regelmäßig wiederholt hat. Dies ermöglicht das Flipped-Classroom-Konzept und macht die Teilnahme effektiver.",
+      "69% of active participants have worked through 68% of the content. This ensures that the majority of participants come to the seminar days well prepared and have internalized the critical content and repeated it regularly. This makes the flipped classroom concept possible and participation powerful.",
   },
   vocationalTraining: {
-    title: "Begleitung von Lernenden in der Berufsausbildung",
-    description: "Dieser Anwendungsfall ist in A und B unterteilt",
+    title: "Accompanying learners in vocational training",
+    description: "This use case is divided in A and B",
     A: {
       title:
-        "Prüfungsvorbereitung für das 3. Lehrjahr der Ausbildung „Kauffrau/Kaufmann EFZ“",
-      participants: "Ca. 90 Lernende pro Jahr",
-      modules: ["Abenteuer", "Reflexion", "Foto-Event", "Ranglisten", "Shop"],
+        'A) Examination preparation for the 3rd year of the apprenticeship "Kauffrau/Kaufmann EFZ"',
+      participants: "Approx. 90 learners per year",
+      modules: [
+        "Adventures",
+        "Reflexion",
+        "Photo Event",
+        "Leaderboard",
+        "Store",
+      ],
       results:
-        "95% der aktiven Lernenden haben 79% der versendeten Inhalte bearbeitet. Verbesserungen bei den Abschlussnoten insgesamt, weniger Lernende mussten wiederholen. Die Attraktivität der Ausbildung wird durch diese mobile Lernmöglichkeit gesteigert und die Prüfungsvorbereitung unterstützt.",
+        "95% of active learners have worked through 79% of the content sent. Improvement in final grades overall, fewer learners had to repeat. Increasing the attractiveness of the training through this mobile learning opportunity and support in exam preparation.",
     },
     B: {
       title:
-        "Begleitung von Lernenden in ihren überbetrieblichen Kursen während der gesamten Lehrzeit („Kauffrau/Kaufmann EFZ“)",
-      participants: "ca. 220 Lernende pro Jahr",
+        'B) Accompanying apprentices in their intercompany courses throughout their apprenticeship ("Kauffrau/Kaufmann EFZ")',
+      participants: "approx. 220 learners per year",
       modules: [
-        "Abenteuer",
-        "Frage der Woche",
-        "Foto-Event",
-        "Ranglisten",
-        "Fitness Check",
-        "Abzeichen",
+        "Adventures",
+        "Question of the Week",
+        "Photo Event",
+        "Leaderboard",
+        "Assessment",
+        "Badges",
       ],
       results:
-        "Dieser zweite use-case wurdein 2022/23 vorbereitet und startete im Sommer 2023. Bis Anfang November haben 88% der 215 Lernenden in den ersten warm-up Monaten 80% der Fragen beantwortet und 570 Kurz-Reflexionenz zu aktuellen Themen verfasst, gelesen und bewertet. Damit ist dasSystem bei den Lernenden etabliert und die Lernenden haben durch Freude und Emotionen Sicherheit in einem System gewonnen, das ihnen hilft, (spielerisch) ihre Kompetenznachweise und ihren Notendurchschnitt zu verbessern. Auch wird die Attraktivität der Ausbildung durch dieses zeitgemässe und mobile eLearning Verfahren gesteigert.",
+        "This second use case was prepared in 2022/23 and started in summer 2023. By the beginning of November, 88% of the 215 learners had answered 80% of the questions in the first warm-up months and written, read and evaluated 570 short reflections on current topics. The system has thus been established among the learners and the learners have gained security through joy and emotions in a system that helps them to (playfully) improve their competency certificates and their grade point average. The attractiveness of the training is also increased by this modern and mobile eLearning process.",
     },
   },
   university: {
-    title: "Begleitung von Studierenden in Universitätskursen",
-    participants: "Ca. 3.000 Studierende",
-    modules: ["Abenteuer", "Reflexion", "Shop", "Ranglisten"],
+    title: "Accompanying students in university courses",
+    participants: "Approx. 3,000 students",
+    modules: ["Adventures", "Reflexion", "Store", "Leaderboard"],
     results:
-      "Die Abbruchquote wurde um etwa 4% reduziert, die Noten verbesserten sich spürbar, die Kurse wurden akademisch intensiver, und die effektive Teilnahmequote der im System aktiven Studierenden lag bei 70%.",
+      "The dropout rate was reduced by about 4%, grades improved noticeably, courses became more academically intensive, and the effective participation rate of students active in the system was 70%.",
   },
 } satisfies Content;
