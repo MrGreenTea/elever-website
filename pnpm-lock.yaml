@@ -38,6 +38,9 @@ importers:
       prettier-plugin-astro:
         specifier: ^0.14.1
         version: 0.14.1
+      prettier-plugin-astro-organize-imports:
+        specifier: ^0.4.11
+        version: 0.4.11(prettier-plugin-astro@0.14.1)(prettier-plugin-tailwindcss@0.6.6(prettier-plugin-astro@0.14.1)(prettier@3.3.3))(prettier@3.3.3)
       prettier-plugin-tailwindcss:
         specifier: ^0.6.6
         version: 0.6.6(prettier-plugin-astro@0.14.1)(prettier@3.3.3)
@@ -2780,6 +2783,21 @@ packages:
         integrity: sha512-gYBeFTZLu055D8Vv3cSPox/0iTPtkzxpLroSYYA7WXgRi31WCJ51Uyl8ZiPeUUjyvs2MBzK+S8v9JVUgHU/Sqw==,
       }
     engines: { node: ">=18.12" }
+
+  prettier-plugin-astro-organize-imports@0.4.11:
+    resolution:
+      {
+        integrity: sha512-qJQZ7qgnTVmk8ALe1SXpCVGa2QNanhsKn6ivfGQqWH8SCgQY1/poxLVras0Q4fqRBugR3xPRGxovODk1tmkbwA==,
+      }
+    peerDependencies:
+      prettier: ^3.0
+      prettier-plugin-astro: "*"
+      prettier-plugin-tailwindcss: "*"
+    peerDependenciesMeta:
+      prettier-plugin-astro:
+        optional: true
+      prettier-plugin-tailwindcss:
+        optional: true
 
   prettier-plugin-astro@0.14.1:
     resolution:
@@ -5585,6 +5603,15 @@ snapshots:
       find-up-simple: 1.0.0
       find-yarn-workspace-root2: 1.2.16
       which-pm: 3.0.0
+
+  prettier-plugin-astro-organize-imports@0.4.11(prettier-plugin-astro@0.14.1)(prettier-plugin-tailwindcss@0.6.6(prettier-plugin-astro@0.14.1)(prettier@3.3.3))(prettier@3.3.3):
+    dependencies:
+      "@astrojs/compiler": 2.10.3
+      prettier: 3.3.3
+      typescript: 5.6.2
+    optionalDependencies:
+      prettier-plugin-astro: 0.14.1
+      prettier-plugin-tailwindcss: 0.6.6(prettier-plugin-astro@0.14.1)(prettier@3.3.3)
 
   prettier-plugin-astro@0.14.1:
     dependencies:

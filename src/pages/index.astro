@@ -3,23 +3,23 @@ import "@fontsource-variable/inter";
 
 import { Image } from "astro:assets";
 
-import Navbar from "../components/Navbar.astro";
-import Divider from "../components/Divider.astro";
 import Button from "../components/Button.astro";
+import Divider from "../components/Divider.astro";
 import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
 
+import Builders from "../assets/SVG/im_automation.svg";
 import HeroIllustration from "../assets/SVG/im_cover.svg";
+import ForgettingCurve from "../assets/SVG/im_forgetting-curve.svg";
 import RobotWithModules from "../assets/SVG/im_motivation.svg";
 import LearningGroup from "../assets/SVG/im_personaiization.svg";
-import Builders from "../assets/SVG/im_automation.svg";
 import Metrics from "../assets/SVG/im_tracking.svg";
-import ForgettingCurve from "../assets/SVG/im_forgetting-curve.svg";
 
-import type { Content } from "../contents/types/home.ts";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import defaultFooter from "../contents/de/footer.ts";
 import defaultContent from "../contents/de/home.ts";
 import defaultNavigation from "../contents/de/navbar.ts";
-import defaultFooter from "../contents/de/footer.ts";
-import { getRelativeLocaleUrl } from "astro:i18n";
+import type { Content } from "../contents/types/home.ts";
 
 interface Props {
   lang: "en" | "de";
