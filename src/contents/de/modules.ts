@@ -12,19 +12,19 @@ export default {
       title: "Abenteuer",
       illustration: "adventures",
       description:
-        "Unsere Abenteuer in Form von Multiple-Choice-Quizzes sind ein zentrales Modul, das relevantes Wissen verankert und es den Lernenden ermöglicht, ihr Wissen eigenständig zu testen. ",
+        "Unsere Abenteuer in Form von Multiple-Choice-Quizzes sind ein zentrales Modul, das relevantes Wissen verankert und es den Lernenden ermöglicht, ihr Wissen eigenständig zu testen.",
     },
     {
       title: "Frage der Woche",
       illustration: "qotw",
       description:
-        "Die Frage der Woche dient zur Auflockerung und soll motivieren, in ein Themengebiet tiefer ein zu tauchen. Wörter, Phrasen oder Bilder werden täglich teilweise enthüllt und laden dazu ein, ein Rätsel kollaborativ zu lösen.",
+        "Die Frage der Woche dient zur Auflockerung und soll motivieren, in ein Themengebiet tiefer einzutauchen. Wörter, Phrasen oder Bilder werden täglich teilweise enthüllt und laden dazu ein, ein Rätsel kollaborativ zu lösen.",
     },
     {
-      title: "Foto Event",
+      title: "Foto-Event",
       illustration: "photoevent",
       description:
-        "Auch das Foto Event dient zur Auflockerung. Diese Aktivität ermöglicht es, andere Teilnehmende besser kennen zu lernen und sich auch von seiner privaten Seite zu zeigen. Sie laden Fotos und einen kurzen Text hoch, die das Wesentliche eines vorgegebenen Themas einfangen.",
+        "Auch das Foto-Event dient zur Auflockerung. Diese Aktivität ermöglicht es, andere Teilnehmende besser kennen zu lernen und sich auch von seiner privaten Seite zu zeigen. Sie laden Fotos und einen kurzen Text hoch, die das Wesentliche eines vorgegebenen Themas einfangen.",
     },
     {
       title: "Reflexion",
@@ -33,7 +33,7 @@ export default {
         "Den Lernenden wird ein Text und/oder Bild präsentiert, um tiefer über ein Thema nachzudenken und dieses mit eigenen Worten zu reflektieren. Bei dieser metakognitiven Aktivität profitieren sie insbesondere auch davon, die Sichtweisen der anderen zu erkennen.",
     },
     {
-      title: "Tipp Spiel",
+      title: "Tipp-Spiel",
       illustration: "tipgame",
       description:
         "Das Tipp-Spiel ist eine besondere Aktivität, die die Spannung während eines realen Sportereignisses wie der Fussball Europa- oder Weltmeisterschaft nutzt. Im Mittelpunkt steht das gemeinsame Mitfiebern während dieses Events und das Verbessern von Vorhersage- und Recherchefähigkeiten.",
@@ -62,7 +62,7 @@ export default {
         "Das Hinzufügen der individuellen Rangliste und der Team Rangliste kann die Teilnahme der Lernenden aus didaktischer Sicht erheblich steigern. Diese Funktion verwandelt individuelle Lernanstrengungen in ein motivierendes gemeinschaftliches Erlebnis.",
     },
     {
-      title: "Store",
+      title: "Shop",
       illustration: "store",
       description:
         "Integrieren Sie einen Shop mit anpassbaren Tauschoptionen in das Lernerlebnis, um die Lernenden besonders zum Beginn zu motivieren. Er kann mit symbolischen Erfolgen wie Abzeichen bis hin zu greifbaren Elementen entsprechend den Vorstellungen und Regularien in Ihrer Organisation gefüllt werden.",
@@ -71,10 +71,10 @@ export default {
       title: "Bibliothek",
       illustration: "library",
       description:
-        "Dies ist eine Sammlung audiovisueller Materialien, die typischerweise  von Kunden bereitgestellt werden und darauf abzielt, selbstgesteuertes Lernen zu fördern und das Wissen zu ergänzen. Das können Dokumente sein wie Skripte und Nachschlagewerke oder Videos, Tonaufnahmen und Links zu externen oder internen Quellen. Idealerweise werden diese gestaffelt veröffentlicht, um Prokrastination zu vermeiden.",
+        "Dies ist eine Sammlung audiovisueller Materialien, die typischerweise von Kunden bereitgestellt werden und darauf abzielt, selbstgesteuertes Lernen zu fördern und das Wissen zu ergänzen. Das können Dokumente sein wie Skripte und Nachschlagewerke oder Videos, Tonaufnahmen und Links zu externen oder internen Quellen. Idealerweise werden diese gestaffelt veröffentlicht, um Prokrastination zu vermeiden.",
     },
     {
-      title: "Abzeichen (Badges)",
+      title: "Abzeichen",
       illustration: "achievements",
       description:
         "Lernende, die gewisse Meilensteine erreicht haben, erhalten Abzeichen wie z.B. exklusive Avatare als Anerkennung für ihre Anstrengungen und zur Förderung eines Gefühls des Fortschritts. Sie können diese Abzeichen sammeln und ein spezielles Set vervollständigen.",

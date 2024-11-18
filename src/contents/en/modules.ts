@@ -3,60 +3,60 @@ import type { Content } from "../types/modules";
 export default {
   title: "Modules",
   description: [
-    "Micro learning and game-like interactions enhance learning by breaking down content into small, digestible segments and making it interactive and fun. This is the Elever philosophy.",
-    "We have created a list of games that can adapt to specific content, each designed to train different abilities, allowing students to enjoy a dynamic, efficient, and effective learning experience.",
+    "Micro learning and gamification enhance learning habits by breaking down content into small, digestible segments and making it interactive and fun. This is the Elever philosophy.",
+    "We have created games and modules that can adapt to specific content, allowing students to enjoy a dynamic yet effective learning experience.",
   ],
-  gamesTitle: "GAMES",
+  gamesTitle: "Games & challenges",
   games: [
     {
       title: "Adventures",
       illustration: "adventures",
       description:
-        "Our trivia game helps to train skills like critical thinking and reading comprehension as participants analyze questions and deduce answers under time constraints.",
+        "Our adventures in the form of a multiple choice quiz is a core module that reinforces relevant knowledge and allows learners to test themselves independently.",
     },
     {
       title: "Question of the Week",
       illustration: "qotw",
       description:
-        "Words, phrases or images are partially revealed every day of the week, inviting players to participate in a collaborative problem-solving fun challenge.",
+        "The Question of the Week serves as a light-hearted break and is intended to motivate learners to dive deeper into a subtopic. Words, phrases or images are partially revealed every day of the week, inviting players to collaboratively solve a fun riddle.",
     },
     {
       title: "Photo Event",
       illustration: "photoevent",
       description:
-        "Upload photos that capture the essence of a given topic. with this interactive game players exercise visual storytelling capabilities and interpretation abilities. ",
+        "The Photo Event also serves as a light-hearted activity. This activity allows participants to get to know each other better and to show a more personal side. They upload photos and text that capture the essence of a given theme.",
     },
     {
       title: "Reflection",
       illustration: "reflection",
       description:
-        "Image or text is presented to students in order to deep thinking on a theme. Participants train expressive skills like writing. In parallel, they refine their ability to analyze and interpret.",
+        "Learners are presented with a text and/or image to encourage deeper reflection on a topic and to express it in their own words. In this metacognitive activity, they particularly benefit from recognizing the perspectives of others.",
     },
     {
       title: "Tip Game",
       illustration: "tipgame",
       description:
-        "A tailored game where predictive skills and conduct research take center stage in the excitement of real-world sport events and tournaments like the UEFA’s EURO. ",
+        "The Tip Game is a special activity that leverages the excitement of real sports events, such as the Football European or World Championship. The focus is on shared enthusiasm during this event and enhancing forecasting and research skills.",
     },
   ],
-  toolsTitle: "TOOLS",
+  toolsTitle: "Tools",
   toolsDescription:
     "It is possible to enhance the learning experiences by complementing the available games with specially designed elements. This allows for even more deeply personalized learning. Create your own combinations!",
   tools: [
     {
-      title: "Reflection",
+      title: "Fitness Check",
       illustration: "assessment",
       description:
-        "Our evaluation tool offers personalized insights and suggestions for improvement. Based on student results, it generates a comprehensive chart, visually mapping out  strengths and areas needing development.",
+        "The Fitness Check is a different type of quiz with more of a test-like character. It documents the starting level before a learning unit, provides intermediate results, or concludes a unit with an evaluation. Based on learners' results, it generates a comprehensive radar chart (spider diagram) that visually maps out strengths and areas needing development. Learners find it especially engaging to compare these results with their own prior self-assessment for each topic area. Each topic area concludes with suggestions for further learning resources, allowing participants to dive deeper into particularly interesting or less strong areas.",
     },
     {
       title: "Chat",
       illustration: "chat",
       description:
-        "This feature gives the trainers the power of transforming traditional education allowing them to provide timely feedback, answer questions promptly, and offer guidance tailored to each student's needs.",
+        "This feature gives trainers the ability to provide timely feedback, answer questions quickly, and offer targeted guidance, especially in environments where typical chat programs are not established. For example, a pre-onboarding program for new employees can be supported through chat even before they officially join the company.",
     },
     {
-      title: "Leaderboard",
+      title: "Leaderboard & Team Leaderboard",
       illustration: "leaderboard",
       description:
         "Adding a leaderboard can significantly enhance students' participation from a didactical perspective. This feature transforms individual learning efforts into a motivating collective experience.",
@@ -65,19 +65,19 @@ export default {
       title: "Store",
       illustration: "store",
       description:
-        "Try a store with customizable rewards in the educational experience to motivate students. It can be filled up with symbolic  achievements as badges to tangible rewards depending on your organization.",
+        "Integrate a store with customizable exchange options into the learning experience to motivate learners, especially at the beginning. It can be filled with symbolic achievements, such as badges, to tangible items, aligned with the preferences and regulations of your organization.",
     },
     {
       title: "Library",
       illustration: "library",
       description:
-        "This is a collection of audiovisual materials (provided by our customers) accesible to students with the intention of stimulating  the self-paced learning and empower them while complementing their knowledge.",
+        "This is a collection of audiovisual materials, typically provided by clients, aimed at promoting self-directed learning and supplementing knowledge. The library can contain documents such as scripts, reference works, videos, audio recordings, or links to external or internal sources. Ideally, these resources are released in stages to help prevent procrastination.",
     },
     {
       title: "Badges",
       illustration: "achievements",
       description:
-        "Top students receive special badges or exclusive characters as a reward for their efforts, fostering a sense of achievement and progression. They can collect these badges and complete a special set.",
+        "Learners who have accomplished certain milestones receive badges, such as exclusive avatars, as recognition for their efforts and to foster a sense of achievement and progress. They can collect these badges and complete a special set.",
     },
   ],
 } satisfies Content;
