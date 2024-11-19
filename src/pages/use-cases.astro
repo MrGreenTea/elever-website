@@ -2,7 +2,6 @@
 import { Image } from "astro:assets";
 
 import Navbar from "../components/Navbar.astro";
-import defaultNavigation from "../contents/de/navbar.ts";
 import defaultContent from "../contents/de/use-cases.ts";
 
 import LeadershipTraining from "../assets/use-cases/im_leadership_training.svg";
@@ -34,7 +33,7 @@ const {
   </head>
   <body class="bg-background text-white">
     <div class="bg-[#33107E]">
-      <Navbar currentPage="/use-cases" content={defaultNavigation} />
+      <Navbar currentPage="/use-cases" lang={lang} />
     </div>
     <main>
       <section class="bg-[#33107E] px-7 pb-4 pt-16">

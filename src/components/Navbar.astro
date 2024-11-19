@@ -2,15 +2,18 @@
 import { Image } from "astro:assets";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
-import type { Content } from "../contents/types/navbar.ts";
+import germanContent from "../contents/de/navbar.ts";
+import englishContent from "../contents/en/navbar.ts";
 
 import EleverLogo from "../assets/SVG/im_elever_logo.svg";
 
 interface Props {
-  content: Content;
   currentPage: string;
+  lang: "de" | "en";
 }
-const { content, currentPage } = Astro.props;
+const { currentPage, lang } = Astro.props;
+
+const content = lang === "en" ? englishContent : germanContent;
 ---
 
 <header class="hidden lg:block">
@@ -47,7 +50,7 @@ const { content, currentPage } = Astro.props;
     </div>
     <div class="hidden lg:flex lg:gap-x-12">
       <a
-        href={getRelativeLocaleUrl(Astro.currentLocale!, "/")}
+        href={getRelativeLocaleUrl(lang, "/")}
         class="text-gray-900 border-b-2 text-sm leading-8"
         class:list={[
           currentPage === "/" ? "border-green-bright" : "border-transparent",
@@ -56,7 +59,7 @@ const { content, currentPage } = Astro.props;
         Elever App
       </a>
       <a
-        href={getRelativeLocaleUrl(Astro.currentLocale!, "/modules")}
+        href={getRelativeLocaleUrl(lang, "/modules")}
         class="text-gray-900 border-b-2 text-sm leading-8"
         class:list={[
           currentPage === "/modules"
@@ -65,7 +68,7 @@ const { content, currentPage } = Astro.props;
         ]}>{content.modules}</a
       >
       <a
-        href={getRelativeLocaleUrl(Astro.currentLocale!, "/use-cases")}
+        href={getRelativeLocaleUrl(lang, "/use-cases")}
         class="text-gray-900 border-b-2 text-sm leading-8"
         class:list={[
           currentPage === "/use-cases"
@@ -84,12 +87,12 @@ const { content, currentPage } = Astro.props;
         <a
           class:list={{
             "font-bold underline":
-              Astro.currentLocale == "de" || Astro.currentLocale == undefined,
+              lang == "de" || Astro.currentLocale == undefined,
           }}
           href={getRelativeLocaleUrl("de", currentPage)}>DE</a
         > / <a
           class:list={{
-            "font-bold underline": Astro.currentLocale == "en",
+            "font-bold underline": lang == "en",
           }}
           href={getRelativeLocaleUrl("en", currentPage)}>EN</a
         >

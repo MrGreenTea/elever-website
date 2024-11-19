@@ -17,7 +17,6 @@ import Metrics from "../assets/SVG/im_tracking.svg";
 
 import { getRelativeLocaleUrl } from "astro:i18n";
 import defaultContent from "../contents/de/home.ts";
-import defaultNavigation from "../contents/de/navbar.ts";
 import type { Content } from "../contents/types/home.ts";
 
 interface Props {
@@ -42,8 +41,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
     <title>{content.title}</title>
   </head>
   <body class="bg-background text-white">
-    <!-- TODO: english-->
-    <Navbar currentPage="/" content={defaultNavigation} />
+    <Navbar currentPage="/" lang={lang} />
     <main class="pt-10 lg:mt-40">
       <div class="px-14 pb-10">
         <div class="mx-auto max-w-7xl">

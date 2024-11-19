@@ -7,7 +7,6 @@ import type { Content } from "../contents/types/modules";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 import defaultContent from "../contents/de/modules.ts";
-import defaultNavigation from "../contents/de/navbar.ts";
 
 import EleverMobile from "../assets/im_modules-flying.svg";
 import ModuleParty from "../assets/modules/im_modules.svg";
@@ -46,7 +45,7 @@ const toolsIllustrations: Map<string, ImageMetadata> = new Map(
   </head>
   <body class="bg-background text-white">
     <div class="bg-[#020C57]">
-      <Navbar currentPage="/modules" content={defaultNavigation} />
+      <Navbar currentPage="/modules" lang={lang} />
     </div>
 
     <main>
