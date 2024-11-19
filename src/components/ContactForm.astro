@@ -14,6 +14,8 @@ const { content } = Astro.props;
       class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:p-4"
       id="name"
       type="text"
+      name="name"
+      required
       placeholder={content.fields.name}
     />
 
@@ -22,6 +24,8 @@ const { content } = Astro.props;
       class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:p-4"
       id="company"
       type="text"
+      name="company"
+      required
       placeholder={content.fields.company}
     />
 
@@ -30,6 +34,8 @@ const { content } = Astro.props;
       class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:p-4"
       id="email"
       type="email"
+      name="email"
+      required
       placeholder={content.fields.email}
     />
 
@@ -38,6 +44,8 @@ const { content } = Astro.props;
       class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:p-4"
       id="phone"
       type="text"
+      name="phone"
+      required
       placeholder={content.fields.phone}
     />
 
@@ -46,12 +54,14 @@ const { content } = Astro.props;
       rows="3"
       class="ring-gray-300 block rounded-sm border border-purple-light bg-purple-dark px-2 py-3 shadow-sm ring-1 ring-inset placeholder:text-purple-bright lg:col-span-2 lg:p-4"
       id="message"
+      name="message"
+      required
       placeholder={content.fields.message}></textarea>
   </div>
 
-  <button
+  <input
     type="submit"
+    value={content.button}
     class="bg-primary mt-11 inline-flex w-full items-center justify-center gap-x-1.5 rounded-md border border-white bg-grey px-8 py-4 text-sm text-white shadow-sm lg:mt-10 lg:max-w-48"
-    >{content.button}</button
-  >
+  />
 </form>
