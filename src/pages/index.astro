@@ -16,7 +16,6 @@ import LearningGroup from "../assets/SVG/im_personaiization.svg";
 import Metrics from "../assets/SVG/im_tracking.svg";
 
 import { getRelativeLocaleUrl } from "astro:i18n";
-import defaultFooter from "../contents/de/footer.ts";
 import defaultContent from "../contents/de/home.ts";
 import defaultNavigation from "../contents/de/navbar.ts";
 import type { Content } from "../contents/types/home.ts";
@@ -25,7 +24,10 @@ interface Props {
   lang: "en" | "de";
   content: Content;
 }
-const { content = defaultContent, lang = Astro.currentLocale } = Astro.props;
+const {
+  content = defaultContent,
+  lang = (Astro.currentLocale ?? "de") as "de" | "en",
+}: Props = Astro.props;
 
 const moduleIllustrations = await Astro.glob("../assets/modules/*.png");
 const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
@@ -222,7 +224,6 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
         </div>
       </div>
     </main>
-    <!-- TODO: english-->
-    <Footer content={defaultFooter} />
+    <Footer lang={lang} />
   </body>
 </html>

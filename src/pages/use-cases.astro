@@ -2,7 +2,6 @@
 import { Image } from "astro:assets";
 
 import Navbar from "../components/Navbar.astro";
-import defaultFooter from "../contents/de/footer.ts";
 import defaultNavigation from "../contents/de/navbar.ts";
 import defaultContent from "../contents/de/use-cases.ts";
 
@@ -19,7 +18,10 @@ interface Props {
   lang: "en" | "de";
   content: Content;
 }
-const { lang = Astro.currentLocale, content = defaultContent } = Astro.props;
+const {
+  lang = (Astro.currentLocale ?? "de") as "de" | "en",
+  content = defaultContent,
+} = Astro.props;
 ---
 
 <html lang={lang}>
@@ -270,7 +272,7 @@ const { lang = Astro.currentLocale, content = defaultContent } = Astro.props;
           alt=""
         />
       </section>
-      <Footer content={defaultFooter} />
+      <Footer lang={lang} />
     </main>
   </body>
 </html>

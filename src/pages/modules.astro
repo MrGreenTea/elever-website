@@ -6,7 +6,6 @@ import type { Content } from "../contents/types/modules";
 
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
-import defaultFooter from "../contents/de/footer.ts";
 import defaultContent from "../contents/de/modules.ts";
 import defaultNavigation from "../contents/de/navbar.ts";
 
@@ -17,7 +16,10 @@ interface Props {
   lang: "en" | "de";
   content: Content;
 }
-const { lang = Astro.currentLocale, content = defaultContent } = Astro.props;
+const {
+  content = defaultContent,
+  lang = (Astro.currentLocale ?? "de") as "de" | "en",
+} = Astro.props;
 
 const illustrationRegex = new RegExp(/ic_(\w+)\./);
 const gamesIllustrations: Map<string, ImageMetadata> = new Map(
@@ -124,7 +126,6 @@ const toolsIllustrations: Map<string, ImageMetadata> = new Map(
         </section>
       </div>
     </main>
-    <!-- TODO: english-->
-    <Footer content={defaultFooter} />
+    <Footer lang={lang} />
   </body>
 </html>

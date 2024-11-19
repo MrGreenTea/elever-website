@@ -1,16 +1,19 @@
 ---
 import { Image } from "astro:assets";
 import ContactForm from "../components/ContactForm.astro";
-import type { Content } from "../contents/types/footer.ts";
+import germanContent from "../contents/de/footer.ts";
+import englishContent from "../contents/en/footer.ts";
 
 import AltusForgeLogo from "../assets/AF Logo.svg";
 import PlaneGuys from "../assets/SVG/im_contact.svg";
 import Divider from "./Divider.astro";
 
 interface Props {
-  content: Content;
+  lang: "de" | "en";
 }
-const { content } = Astro.props;
+const { lang } = Astro.props;
+
+const content = lang === "en" ? englishContent : germanContent;
 ---
 
 <footer
