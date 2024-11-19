@@ -69,7 +69,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
             </div>
           </section>
           <section class="mt-10 lg:mt-28">
-            <h2 class="text-center text-xs lg:text-2xl">
+            <h2 class="text-center text-xs uppercase lg:text-2xl">
               {content.valueProposition.title}
             </h2>
             <div
@@ -126,7 +126,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
             </div>
           </section>
           <section class="mt-12 lg:mt-32">
-            <h2 class="text-center text-xs lg:text-2xl">
+            <h2 class="text-center text-xs uppercase lg:text-2xl">
               {content.modules.title}
             </h2>
             <div
@@ -166,7 +166,9 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
             </div>
           </section>
           <section class="pt-12 lg:mt-20">
-            <h2 class="text-center text-sm lg:text-2xl">{content.cms.title}</h2>
+            <h2 class="text-center text-sm uppercase lg:text-2xl">
+              {content.cms.title}
+            </h2>
             <div class="lg:grid lg:grid-cols-2 lg:items-center lg:gap-x-12">
               <div>
                 <h3 class="mt-8 text-xl lg:text-4xl">

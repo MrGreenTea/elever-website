@@ -65,7 +65,7 @@ const toolsIllustrations: Map<string, ImageMetadata> = new Map(
       </section>
       <div class="mx-auto max-w-7xl px-14 lg:pb-16">
         <section class="py-10 text-center lg:py-20">
-          <h2 class="text-xs lg:text-2xl">GAMES</h2>
+          <h2 class="text-xs uppercase lg:text-2xl">{content.gamesTitle}</h2>
           <div
             class="mt-8 grid grid-cols-1 gap-y-14 lg:mt-20 lg:grid-cols-6 lg:gap-x-24 lg:gap-y-28"
           >
@@ -91,7 +91,9 @@ const toolsIllustrations: Map<string, ImageMetadata> = new Map(
           </div>
         </section>
         <section class="flex flex-col items-center">
-          <h2 class="text-center text-xs lg:text-2xl">{content.toolsTitle}</h2>
+          <h2 class="text-center text-xs uppercase lg:text-2xl">
+            {content.toolsTitle}
+          </h2>
           <p class="mt-9 max-w-prose text-sm lg:mt-20 lg:text-2xl">
             {content.toolsDescription}
           </p>
