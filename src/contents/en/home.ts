@@ -44,7 +44,8 @@ export default {
       {
         title: "Content automation at its best",
         description: [
-          "Prepare and customize an educational experience that fulfills your organization's needs. Set the time for activities, offer points and rewards, or challenge your students to appear in the top positions on the leaderboard. Once the rules have been defined, the processes can be automated and repeated. All that remains for you to do is to evaluate the results and participation in the CMS.",
+          "Prepare and customize an educational experience that fulfills your organization's needs. Set the time for activities, offer points and rewards, or challenge your students to appear in the top positions on the leaderboard.",
+          "Once the rules have been defined, the processes can be automated and repeated. All that remains for you to do is to evaluate the results and participation in the CMS.",
         ],
       },
       {

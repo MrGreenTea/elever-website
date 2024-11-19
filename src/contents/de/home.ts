@@ -46,7 +46,8 @@ export default {
       {
         title: "Content-Automatisierung in seiner besten Form",
         description: [
-          "Bereiten Sie ein personalisiertes Lernerlebnis vor, das die Bedürfnisse Ihrer Organisation erfüllt. Bestimmen Sie die Zeiten für Aktivitäten, bieten Sie Punkte und Belohnungen an oder fordern Sie Teilnehmende heraus, die Spitzenpositionen in der Rangliste zu erreichen. Sind die Regeln einmal festgelegt, lassen sich die Abläufe automatisieren und wiederholen. Ihnen bleibt (nur) noch die Auswertung der Ergebnisse und Beteiligung im CMS.",
+          "Bereiten Sie ein personalisiertes Lernerlebnis vor, das die Bedürfnisse Ihrer Organisation erfüllt. Bestimmen Sie die Zeiten für Aktivitäten, bieten Sie Punkte und Belohnungen an oder fordern Sie Teilnehmende heraus, die Spitzenpositionen in der Rangliste zu erreichen.",
+          "Sind die Regeln einmal festgelegt, lassen sich die Abläufe automatisieren und wiederholen. Ihnen bleibt (nur) noch die Auswertung der Ergebnisse und Beteiligung im CMS.",
         ],
       },
       {
