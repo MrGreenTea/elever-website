@@ -29,7 +29,7 @@ export default {
     forgettingCurveTitle: "Counteract the forgetting curve",
   },
   modules: {
-    title: "MODULES",
+    title: "Meet the Modules",
     description: [
       "Over the past few years, we have built a powerful system. It contains a collection of modules and features to organize gamified education. Those support motivation via mobile and personalized learning. Furthermore automates the Elever system the processes for admins. It consists of a Mobile App, a Web App, and a Content Management System that includes an authoring system. Each module is accessible via the CMS.",
       "It helps you to implement your creative ideas. Our tip: Awaken the curiosity of the learners, exaggerate and use humor. Based on our experience and evaluations, we can say that learners actively engage in collaborative, relevant and appropriately challenging tasks. In this way, they acquire the necessary knowledge to develop and apply their skills and competencies and realize their full potential.",
