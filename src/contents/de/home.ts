@@ -16,7 +16,8 @@ export default {
         title: "Unser Ziel ist es, die Lern-Motivation zu fördern",
         description: [
           "Was uns Menschen seit der Kindheit verbindet, ist, dass wir gerne spielen und durch spielen lernen. Bei Elever glauben wir an die Möglichkeiten des Spiels auch im professionellen Umfeld.",
-          "Wir respektieren, dass verschiedene Lerntypen unterschiedliche Quellen der Motivation haben. Diese können wir grösstenteils mit unserem System adressieren. Elever ermöglicht es Ihnen und Ihrer Organisation im Bereich der Aus- und Weiterbildung, Lernspiele zu erstellen und verschiedene Motivationsfaktoren in einem „Gamification Management System“ zu verwalten. Die Lernpfade, die Sie erstellen, basieren auf der individuellen Situation der Gruppe.Micro - Learning - Aktivitäten helfen ihnen, eine regelmässige wöchentliche Gewohnheit zu entwickeln.Dies hält die Engagement - Raten noch, wirkt der Vergessenskurve entgegen und sorgt für den Transfer des Gelernten.",
+          "Wir respektieren, dass verschiedene Lerntypen unterschiedliche Quellen der Motivation haben. Diese können wir grösstenteils mit unserem System adressieren. Elever ermöglicht es Ihnen und Ihrer Organisation im Bereich der Aus- und Weiterbildung, Lernspiele zu erstellen und verschiedene Motivationsfaktoren in einem „Gamification Management System“ zu verwalten.",
+          "Die Lernpfade, die Sie erstellen, basieren auf der individuellen Situation der Gruppe.Micro - Learning - Aktivitäten helfen ihnen, eine regelmässige wöchentliche Gewohnheit zu entwickeln.Dies hält die Engagement - Raten noch, wirkt der Vergessenskurve entgegen und sorgt für den Transfer des Gelernten.",
         ],
       },
       personalizedLearning: {

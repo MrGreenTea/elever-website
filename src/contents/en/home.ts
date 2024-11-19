@@ -15,7 +15,8 @@ export default {
         title: "Our aim is to foster motivation for learning",
         description: [
           "What has united most of us since childhood is that we like to play and learn through play. At Elever, we believe in the possibilities of games also in a professional environment.",
-          'We respect the fact that different types of learners have different sources of motivation. For the most part, we can address these with our system. Elever makes it possible for you and your organization in the area of training and further education, to create learning games and manage multiple motivators in one "Gamification Management System". The learning experiences you create are based on the individual situation of the cohort. Micro learning activities help them to build a healthy weekly habit. This maintains engagement rates, counteracts the forgetting curve and ensures the transfer of what has been learned.',
+          'We respect the fact that different types of learners have different sources of motivation. For the most part, we can address these with our system. Elever makes it possible for you and your organization in the area of training and further education, to create learning games and manage multiple motivators in one "Gamification Management System".',
+          "The learning experiences you create are based on the individual situation of the cohort. Micro learning activities help them to build a healthy weekly habit. This maintains engagement rates, counteracts the forgetting curve and ensures the transfer of what has been learned.",
         ],
       },
       personalizedLearning: {
