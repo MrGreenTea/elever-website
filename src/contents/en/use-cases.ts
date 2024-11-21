@@ -8,7 +8,7 @@ export default {
     participants: "Participants",
     modules: "Modules",
     results: "Results",
-    fullUsecaseButton: "Read the full use case (currently in German only)",
+    fullUsecaseButton: "Read the full use case",
   },
   leadershipTraining: {
     title: "Leadership training in a Corporation",
