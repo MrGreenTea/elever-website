@@ -30,7 +30,7 @@ export default {
     description: "This use case is divided in A and B",
     A: {
       title:
-        'A) Examination preparation for the 3rd year of the apprenticeship "Kauffrau/Kaufmann EFZ"',
+        'Examination preparation for the 3rd year of the apprenticeship "Kauffrau/Kaufmann EFZ"',
       participants: "Approx. 90 learners per year",
       modules: [
         "Adventures",
@@ -44,7 +44,7 @@ export default {
     },
     B: {
       title:
-        'B) Accompanying apprentices in their intercompany courses throughout their apprenticeship ("Kauffrau/Kaufmann EFZ")',
+        'Accompanying apprentices in their intercompany courses throughout their apprenticeship ("Kauffrau/Kaufmann EFZ")',
       participants: "approx. 220 learners per year",
       modules: [
         "Adventures",
