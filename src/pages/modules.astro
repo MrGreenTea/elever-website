@@ -82,7 +82,9 @@ const toolsIllustrations: Map<string, ImageMetadata> = new Map(
                     src={gamesIllustrations.get(game.illustration)!}
                   />
 
-                  <h3 class="mt-4 text-xl lg:mt-5 lg:text-2xl">{game.title}</h3>
+                  <h3 class="mt-4 text-center text-xl lg:mt-5 lg:text-2xl">
+                    {game.title}
+                  </h3>
                   <p class="mt-5 max-w-xs text-sm lg:text-base">
                     {game.description}
                   </p>
@@ -109,7 +111,9 @@ const toolsIllustrations: Map<string, ImageMetadata> = new Map(
                     alt={tool.title}
                     src={toolsIllustrations.get(tool.illustration)!}
                   />
-                  <h3 class="mt-4 text-xl lg:text-2xl">{tool.title}</h3>
+                  <h3 class="mt-4 text-center text-xl lg:text-2xl">
+                    {tool.title}
+                  </h3>
                   <p class="mt-5 max-w-xs text-sm lg:text-base">
                     {tool.description}
                   </p>
