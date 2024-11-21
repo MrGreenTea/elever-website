@@ -3,10 +3,10 @@ import type { Content } from "../types/footer";
 export default {
   contact: {
     title: "CONTACT",
-    subtitle: "Get in touch",
+    subtitle: "We look forward to hearing from you!",
     description: [
-      "Do you want to transform learning routines and build lasting habits for the teams in an organization or company? Request our demo and learn about gamification with the experts while playing the quiz we have prepared for you.",
-      "Would you like to see your content within one of our games? Drop us a line and discover how we can run a project together.",
+      "Do you want to transform learning routines and build lasting habits for the teams in your organization or your company? Request a demo access and learn about gamification and microlearning - while playing the quiz we have prepared for you.",
+      "Would you like to see your content within one of our modules? Drop us a line and discover how we can run a project together.",
     ],
     fields: {
       name: "Your name",

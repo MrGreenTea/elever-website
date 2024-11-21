@@ -3,10 +3,10 @@ import type { Content } from "../types/footer";
 export default {
   contact: {
     title: "KONTAKT",
-    subtitle: "Kontaktieren Sie uns",
+    subtitle: "Wir freuen uns über Nachrichten!",
     description: [
-      "Möchten Sie Lernroutinen transformieren und dauerhafte Gewohnheiten für die Teams in einer Organisation oder einem Unternehmen aufbauen? Fordern Sie unsere Demo an und lernen Sie von Experten über Gamification, während Sie das Quiz spielen, das wir für Sie vorbereitet haben.",
-      "Möchten Sie Ihre Inhalte in einem unserer Spiele sehen? Schreiben Sie uns und entdecken Sie, wie wir gemeinsam ein Projekt durchführen können.",
+      "Möchten Sie Lernroutinen transformieren und dauerhafte Gewohnheiten für Teams in Ihrer Organisation oder Ihrem Unternehmen aufbauen? Fordern Sie einen Demo-Zugang an und erfahren Sie mehr über Gamification und Microlearning während Sie das vorbereitete Quiz spielen.",
+      "Möchten Sie Ihren Inhalt in einem unserer Module sehen? Schreiben Sie uns und wir erörtern, wie wir gemeinsam ein Projekt umsetzen können.",
     ],
     fields: {
       name: "Ihr Name",
