@@ -56,7 +56,8 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
               </h2>
               <p class="mt-3 text-sm lg:text-4xl">{content.hero.description}</p>
               <div class="mt-12 hidden lg:block">
-                <Button href="#">{content.hero.callToAction}</Button>
+                <Button href="#contact-form">{content.hero.callToAction}</Button
+                >
               </div>
             </div>
             <Image
@@ -65,7 +66,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
               class="mt-3 max-h-[48rem] w-full flex-1"
             />
             <div class="mt-10 lg:hidden">
-              <Button href="#">{content.hero.callToAction}</Button>
+              <Button href="#contact-form">{content.hero.callToAction}</Button>
             </div>
           </section>
           <section class="mt-10 lg:mt-28">
