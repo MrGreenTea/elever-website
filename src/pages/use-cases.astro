@@ -56,8 +56,10 @@ const {
       <section class="bg-[#33107E] px-14 pb-10 pt-4 lg:pb-14">
         <div class="mx-auto max-w-7xl lg:flex lg:gap-x-12">
           <Image
-            class="mx-auto lg:mx-0 lg:flex-1"
+            class="mx-auto lg:mx-0 lg:w-full lg:flex-1"
             src={LeadershipTraining}
+            widths={[256, 616, 970, 1232, 1410, 1580, 1721]}
+            sizes="(min-width: 1480px) 616px, (min-width: 1024px) 42vw, calc(100vw - 7rem)"
             alt=""
           />
           <div class="lg:flex-1">
@@ -120,8 +122,10 @@ const {
           class="mx-auto max-w-7xl items-start lg:flex lg:flex-row-reverse lg:gap-x-12"
         >
           <Image
-            class="mx-auto lg:mx-0 lg:mt-36 lg:flex-1"
+            class="mx-auto lg:mx-0 lg:mt-36 lg:w-full lg:flex-1"
             src={VocationalTraining}
+            widths={[256, 616, 970, 1232, 1410, 1580, 1721]}
+            sizes="(min-width: 1480px) 616px, (min-width: 1024px) 42vw, calc(100vw - 7rem)"
             alt=""
           />
           <div class="lg:flex-1">
@@ -213,7 +217,13 @@ const {
       </section>
       <section class="bg-[#046087] px-4 py-10">
         <div class="mx-auto max-w-7xl px-10 lg:flex lg:gap-x-12">
-          <Image src={University} class="flex-1" alt="" />
+          <Image
+            src={University}
+            class="flex-1 lg:w-full"
+            alt=""
+            widths={[256, 616, 970, 1232, 1410, 1580, 1721]}
+            sizes="(min-width: 1480px) 616px, (min-width: 1024px) 42vw, calc(100vw - 7rem)"
+          />
           <div class="flex-1">
             <h2 class="mt-10 flex items-center gap-x-2">
               <div class="text-6xl font-semibold lg:text-8xl">3</div>
