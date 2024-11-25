@@ -28,7 +28,7 @@ const content = lang === "en" ? englishContent : germanContent;
     <!-- Hamburger icon -->
     <input class="side-menu z-10 hidden" type="checkbox" id="side-menu" />
     <label class="hamb z-10" aria-label="Menu" for="side-menu">
-      <span class="hamb-line relative h-[2px] w-6"></span>
+      <span class="hamb-line"></span>
     </label>
     <!-- Menu -->
     <nav
@@ -124,7 +124,11 @@ const content = lang === "en" ? englishContent : germanContent;
 
   .hamb-line {
     background: white;
-  }
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+  } /* Style span tag */
 
   .hamb-line::before,
   .hamb-line::after {
