@@ -1,102 +1,187 @@
 ---
 import { Image } from "astro:assets";
+
 import { getRelativeLocaleUrl } from "astro:i18n";
+import EleverLogo from "../assets/SVG/im_elever_logo.svg";
 
 import germanContent from "../contents/de/navbar.ts";
 import englishContent from "../contents/en/navbar.ts";
-
-import EleverLogo from "../assets/SVG/im_elever_logo.svg";
-
 interface Props {
   currentPage: string;
   lang: "de" | "en";
+  class?: string;
 }
-const { currentPage, lang } = Astro.props;
+const { currentPage, lang, class: className } = Astro.props;
 
 const content = lang === "en" ? englishContent : germanContent;
 ---
 
-<header class="hidden lg:block">
-  <nav
-    class="mx-auto flex max-w-[90rem] items-center justify-between p-6 lg:px-8"
-    aria-label="Global"
+<header role="banner" class={className} class:list={[className]} class="w-full">
+  <div
+    class="container mx-auto flex max-w-[90rem] items-center justify-between px-6 py-4 lg:px-8 lg:py-6"
   >
-    <div class="flex lg:flex-1">
-      <a href="#" class="-m-1.5 p-1.5">
-        <span class="sr-only">Elever by AltusForge</span>
-        <Image class="h-8 w-auto" src={EleverLogo} alt="" />
-      </a>
-    </div>
-    <div class="flex lg:hidden">
-      <button
-        type="button"
-        class="text-gray-700 -m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+    <!-- Logo -->
+    <a href="/" aria-label="Home">
+      <Image class="h-8" src={EleverLogo} alt="Elever by AltusForge" />
+    </a>
+
+    <!-- Hamburger icon -->
+    <input class="side-menu z-10 hidden" type="checkbox" id="side-menu" />
+    <label class="hamb z-10" aria-label="Menu" for="side-menu">
+      <span class="hamb-line relative h-[2px] w-6"></span>
+    </label>
+    <!-- Menu -->
+    <nav
+      class="fixed h-full max-h-0 w-full overflow-hidden"
+      role="navigation"
+      aria-label="Main"
+    >
+      <ul
+        class="menu mt-6 flex flex-col gap-y-8 lg:mt-0 lg:flex-row lg:gap-x-12"
       >
-        <span class="sr-only">{content.openMenu}</span>
-        <svg
-          class="h-6 w-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
-        </svg>
-      </button>
-    </div>
-    <div class="hidden lg:flex lg:gap-x-12">
-      <a
-        href={getRelativeLocaleUrl(lang, "/")}
-        class="text-gray-900 border-b-2 text-sm leading-8"
-        class:list={[
-          currentPage === "/" ? "border-green-bright" : "border-transparent",
-        ]}
-      >
-        Elever App
-      </a>
-      <a
-        href={getRelativeLocaleUrl(lang, "/modules")}
-        class="text-gray-900 border-b-2 text-sm leading-8"
-        class:list={[
-          currentPage === "/modules"
-            ? "border-green-bright"
-            : "border-transparent",
-        ]}>{content.modules}</a
-      >
-      <a
-        href={getRelativeLocaleUrl(lang, "/use-cases")}
-        class="text-gray-900 border-b-2 text-sm leading-8"
-        class:list={[
-          currentPage === "/use-cases"
-            ? "border-green-bright"
-            : "border-transparent",
-        ]}>{content.usecases}</a
-      >
-      <a
-        href="https://app.elever.ch"
-        class="text-gray-900 border-b-2 border-transparent text-sm leading-8"
-        >{content.login}</a
-      >
-      <div
-        class="text-gray-900 inline-flex items-center justify-center gap-x-1.5 text-sm leading-8"
-      >
-        <a
-          class:list={{
-            "font-bold underline":
-              lang == "de" || Astro.currentLocale == undefined,
-          }}
-          href={getRelativeLocaleUrl("de", currentPage)}>DE</a
-        > / <a
-          class:list={{
-            "font-bold underline": lang == "en",
-          }}
-          href={getRelativeLocaleUrl("en", currentPage)}>EN</a
-        >
-      </div>
-    </div>
-  </nav>
+        <li>
+          <a
+            href={getRelativeLocaleUrl(lang, "/")}
+            class="text-gray-900 border-b-2 text-sm leading-8"
+            class:list={[
+              currentPage === "/"
+                ? "border-green-bright"
+                : "border-transparent",
+            ]}
+          >
+            Elever App
+          </a>
+        </li>
+        <li>
+          <a
+            href={getRelativeLocaleUrl(lang, "/modules")}
+            class="text-gray-900 border-b-2 text-sm leading-8"
+            class:list={[
+              currentPage === "/modules"
+                ? "border-green-bright"
+                : "border-transparent",
+            ]}
+          >
+            {content.modules}
+          </a>
+        </li>
+        <li>
+          <a
+            href={getRelativeLocaleUrl(lang, "/use-cases")}
+            class="text-gray-900 border-b-2 text-sm leading-8"
+            class:list={[
+              currentPage === "/use-cases"
+                ? "border-green-bright"
+                : "border-transparent",
+            ]}
+          >
+            {content.usecases}
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://app.elever.ch"
+            class="text-gray-900 border-b-2 border-transparent text-sm leading-8"
+          >
+            {content.login}
+          </a>
+        </li>
+        <li>
+          <div
+            class="text-gray-900 inline-flex items-center justify-center gap-x-1.5 text-sm leading-8"
+          >
+            <a
+              class:list={{
+                "font-bold underline":
+                  lang == "de" || Astro.currentLocale == undefined,
+              }}
+              href={getRelativeLocaleUrl("de", currentPage)}>DE</a
+            > / <a
+              class:list={{
+                "font-bold underline": lang == "en",
+              }}
+              href={getRelativeLocaleUrl("en", currentPage)}>EN</a
+            >
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
+
+<style>
+  .container:has(.side-menu:checked) {
+    align-items: normal;
+    justify-content: justify-between;
+  }
+
+  /* Menu Icon */
+  .hamb {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+  } /* Style label tag */
+
+  .hamb-line {
+    background: white;
+  }
+
+  .hamb-line::before,
+  .hamb-line::after {
+    background: white;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+  .hamb-line::before {
+    top: 5px;
+  }
+  .hamb-line::after {
+    top: -5px;
+  }
+
+  /* Toggle menu icon */
+  .side-menu:checked ~ nav {
+    max-height: 100%;
+    background-color: #0d0d0d;
+    /* HACK: work around header padding  */
+    margin-left: -1.5rem;
+    padding: 1.5rem;
+  }
+
+  .side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+  }
+  .side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  @media (max-width: 768px) {
+    header:has(.side-menu:checked) {
+      background-color: #0d0d0d;
+    }
+  }
+
+  /* Responsiveness */
+  @media (min-width: 768px) {
+    nav {
+      max-height: none;
+      top: 0;
+      position: relative;
+      width: fit-content;
+      background-color: transparent;
+    }
+
+    .hamb {
+      display: none;
+    }
+  }
+</style>
