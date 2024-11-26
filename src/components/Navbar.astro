@@ -18,7 +18,7 @@ const content = lang === "en" ? englishContent : germanContent;
 
 <header role="banner" class={className} class:list={[className]} class="w-full">
   <div
-    class="container mx-auto flex max-w-[90rem] items-center justify-between px-6 py-4 lg:px-8 lg:py-6"
+    class="container mx-auto flex max-w-[90rem] items-center justify-between px-6 py-4 lg:p-8"
   >
     <!-- Logo -->
     <a href="/" aria-label="Home">
@@ -168,14 +168,14 @@ const content = lang === "en" ? englishContent : germanContent;
     top: 0;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     header:has(.side-menu:checked) {
       background-color: #0d0d0d;
     }
   }
 
   /* Responsiveness */
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     nav {
       max-height: none;
       top: 0;
