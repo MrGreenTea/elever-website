@@ -24,3 +24,9 @@
 
   mail($to, $subject, implode("<br/>", $emailMessage), implode("\n", $headers));
 ?>
+
+<html>
+  <body>
+    Thank you for your message
+  </body>
+</html>
