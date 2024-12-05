@@ -21,6 +21,8 @@ jobs:
         run: pnpm install
       - name: 🛠️ Build production
         run: pnpm run build
+      - name: 📩 Insert contact.php
+        run: cp ./src/contact.php ./dist/
       - name: 🚀 Sync files to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
