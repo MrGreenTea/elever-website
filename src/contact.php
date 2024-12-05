@@ -15,7 +15,7 @@
 
   // SEND MAIL
   $fromUser = 'system@altusforge.com';
-  $to = 'th@altusforge.com';
+  $to = 'jb@altusforge.com';
   $subject = 'New Contact from elever.ch';
   $headers = [];
   $headers[] = "From: $fromUser <$fromUser>";
