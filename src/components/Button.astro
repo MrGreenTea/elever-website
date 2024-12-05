@@ -8,7 +8,7 @@ const { href, class: className = "" } = Astro.props;
 
 <div class={className}>
   <a
-    class="bg-primary inline-flex w-fit items-center justify-center gap-x-1.5 rounded-md border border-white bg-grey px-8 py-4 text-center text-sm text-white shadow-sm"
+    class="bg-primary inline-flex w-fit items-center justify-center gap-x-1.5 rounded-md border border-white bg-grey-dark px-8 py-4 text-center text-sm text-white shadow-sm hover:bg-grey-medium active:bg-grey-darkest"
     href={href}
   >
     <slot />

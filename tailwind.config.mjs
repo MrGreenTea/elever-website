@@ -23,7 +23,11 @@ export default {
     colors: {
       background: "#0D0D0D",
       white: "#FFFFFF",
-      grey: "#212021",
+      grey: {
+        darkest: "#0D0D0D",
+        dark: "#212021",
+        medium: "#4A4A4A",
+      },
       green: {
         neon: "#00FF26",
         bright: "#21E31D",
