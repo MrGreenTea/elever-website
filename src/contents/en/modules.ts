@@ -12,7 +12,7 @@ export default {
       title: "Adventures",
       illustration: "adventures",
       description:
-        "Our adventures in the form of a multiple choice quiz is a core module that reinforces relevant knowledge and allows learners to test themselves independently.",
+        "Our adventures, in the form of quiz-based interactions such as multiple-choice, true/false, and others, are a core module that reinforces relevant knowledge and enables learners to independently test and expand their knowledge.",
     },
     {
       title: "Question of the Week",

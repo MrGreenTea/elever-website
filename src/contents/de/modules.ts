@@ -12,7 +12,7 @@ export default {
       title: "Abenteuer",
       illustration: "adventures",
       description:
-        "Unsere Abenteuer in Form von Multiple-Choice-Quizzes sind ein zentrales Modul, das relevantes Wissen verankert und es den Lernenden ermöglicht, ihr Wissen eigenständig zu testen.",
+        "Unsere Abenteuer in Form von Quiz-basierten Interaktioinen wie Multiple-Choice, Wahr-Falsch und weiteren, sind ein zentrales Modul, das relevantes Wissen verankert und es den Lernenden ermöglicht, ihr Wissen eigenständig zu testen und zu erweitern.",
     },
     {
       title: "Frage der Woche",
