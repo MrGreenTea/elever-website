@@ -27,6 +27,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: s018.cyon.net
-          username: preview@elever.ch
-          password: ${{ secrets.ftp_password }}
+          username: ${{ env.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: "./dist/"
