@@ -3,10 +3,14 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   deploy-ftp:
     runs-on: ubuntu-24.04
+    environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Preview' }}
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
@@ -27,6 +31,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: s018.cyon.net
-          username: ${{ env.FTP_USER }}
+          username: ${{ vars.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: "./dist/"
