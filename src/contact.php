@@ -5,6 +5,7 @@
     'response' => $_POST["h-captcha-response"],
     'secret' => $env["HCAPTCHA_SECRET"],
     'remoteip' => $_SERVER['REMOTE_ADDR'],
+    'sitekey' => 'f1a24450-5f46-43b6-93f8-a6dec6746c76'
   ]
   $options = [
       'http' => [
@@ -14,9 +15,8 @@
       ],
   ];
   $context = stream_context_create($options);
-  $result = file_get_contents($hcaptcha_verify_url, false, $context);
-  if ($result === false) {
-      $success = false;
+  $success = json_decode(file_get_contents($hcaptcha_verify_url, false, $context)['success'];
+  if (!$success) {
       return
   }
 
