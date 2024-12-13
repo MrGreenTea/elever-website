@@ -282,8 +282,11 @@ const {
     </section>
     <Footer lang={lang} />
 
-    <script is:inline src="https://js.hcaptcha.com/1/api.js" async defer
-    ></script>
+    <script
+      is:inline
+      src={`https://js.hcaptcha.com/1/api.js?hl=${lang}`}
+      async
+      defer></script>
   </body>
 </html>
 
