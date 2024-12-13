@@ -128,6 +128,12 @@ const toolsIllustrations: Map<string, ImageMetadata> = new Map(
       </div>
     </main>
     <Footer lang={lang} />
+
+    <script
+      is:inline
+      src={`https://js.hcaptcha.com/1/api.js?hl=${lang}`}
+      async
+      defer></script>
   </body>
 </html>
 

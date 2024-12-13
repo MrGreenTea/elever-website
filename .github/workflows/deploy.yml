@@ -3,11 +3,14 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   deploy-production:
     runs-on: ubuntu-24.04
-    environment: Production
+    environment: ${{ github.ref == 'refs/heads/main' && 'Production' || 'Preview' }}
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
