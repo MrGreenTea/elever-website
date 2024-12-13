@@ -1,5 +1,5 @@
 <?php
-  $env = parse_ini_file(".php-env");
+  $env = parse_ini_file("~/.php-env");
   $hcaptcha_verify_url = 'https://api.hcaptcha.com/siteverify'
   $data = [
     'response' => $_POST["h-captcha-response"],
