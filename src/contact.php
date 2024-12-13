@@ -16,6 +16,7 @@
   $context = stream_context_create($options);
   $result = file_get_contents($hcaptcha_verify_url, false, $context);
   if ($result === false) {
+      $success = false;
       return
   }
 
@@ -42,11 +43,17 @@
   $headers[] = "MIME-Version: 1.0";
   $headers[] = "Content-type: text/html; charset=UTF-8";
 
-  mail($to, $subject, implode("<br/>", $emailMessage), implode("\n", $headers));
+  $success = mail($to, $subject, implode("<br/>", $emailMessage), implode("\n", $headers));
 ?>
 
 <html>
   <body>
-    Thank you for your message
+  <?php
+    if ($success) {
+      echo "Thank you for your message"
+    } else {
+      echo "That didn't work. Please try again."
+    }
+  ?>
   </body>
 </html>
