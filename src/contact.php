@@ -4,6 +4,7 @@
   $data = [
     'response' => $_POST["h-captcha-response"],
     'secret' => $env["HCAPTCHA_SECRET"],
+    'remoteip' => $_SERVER['REMOTE_ADDR'],
   ]
   $options = [
       'http' => [
