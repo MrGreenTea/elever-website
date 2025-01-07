@@ -18,7 +18,7 @@ export default {
       title: "Question of the Week",
       illustration: "qotw",
       description:
-        "The Question of the Week serves as a light-hearted break and is intended to motivate learners to dive deeper into a subtopic. Words, phrases or images are partially revealed every day of the week, inviting players to collaboratively solve a fun riddle.",
+        "The Question of the Week is intended to motivate learners to dive deeper into a subtopic. Words, phrases or images are partially revealed every day of the week, inviting players to collaboratively solve a fun riddle.",
     },
     {
       title: "Photo Event",
@@ -47,7 +47,7 @@ export default {
       title: "Fitness Check",
       illustration: "assessment",
       description:
-        "The Fitness Check is a different type of quiz with more of a test-like character. It documents the starting level before a learning unit, provides intermediate results, or concludes a unit with an evaluation. Based on learners' results, it generates a comprehensive radar chart (spider diagram) that visually maps out strengths and areas needing development. Learners find it especially engaging to compare these results with their own prior self-assessment for each topic area. Each topic area concludes with suggestions for further learning resources, allowing participants to dive deeper into particularly interesting or less strong areas.",
+        "The Fitness Check has a test-like character. It documents the status before, during, or after a learning unit. Based on the results, it generates a comprehensive radar chart (spider diagram). Particularly exciting for learners is the comparison with a prior self-assessment for each topic block. Each topic block concludes with suggestions for further learning resources.",
     },
     {
       title: "Chat",
@@ -56,10 +56,10 @@ export default {
         "This feature gives trainers the ability to provide timely feedback, answer questions quickly, and offer targeted guidance, especially in environments where typical chat programs are not established. For example, a pre-onboarding program for new employees can be supported through chat even before they officially join the company.",
     },
     {
-      title: "Leaderboard & Team Leaderboard",
+      title: "Leaderboard",
       illustration: "leaderboard",
       description:
-        "Adding a leaderboard can significantly enhance students' participation from a didactical perspective. This feature transforms individual learning efforts into a motivating collective experience.",
+        "Adding a leaderboard and a team leaderboard can significantly enhance students' participation from a didactical perspective. This feature transforms individual learning efforts into a motivating collective experience.",
     },
     {
       title: "Store",
