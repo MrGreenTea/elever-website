@@ -4,7 +4,7 @@ export default {
   title: "Module",
   description: [
     "Microlearning und Gamification verändern Lerngewohnheiten auf positive Weise, indem Inhalte in kleine, leicht verdauliche Einheiten unterteilt und interaktiv sowie unterhaltsam gestaltet werden. Das ist die Philosophie von Elever.",
-    "Wir haben Spiele und Module entwickelt, die sich an spezifische Inhalte anpassen lassen. Jedes Spiel ist darauf ausgelegt, den Lernenden ein dynamisches und zugleich wirkungsvolles Lernerlebnis zu bieten.",
+    "Wir haben Spielfolgen und Module entwickelt, die sich an spezifische Inhalte anpassen lassen. Diese sind darauf ausgelegt, den Lernenden ein dynamisches und zugleich wirkungsvolles Lernerlebnis zu bieten.",
   ],
   gamesTitle: "Spiele & Herausforderungen",
   games: [
@@ -24,7 +24,7 @@ export default {
       title: "Foto-Event",
       illustration: "photoevent",
       description:
-        "Auch das Foto-Event dient zur Auflockerung. Diese Aktivität ermöglicht es, andere Teilnehmende besser kennen zu lernen und sich auch von seiner privaten Seite zu zeigen. Sie laden Fotos und einen kurzen Text hoch, die das Wesentliche eines vorgegebenen Themas einfangen.",
+        "Diese Aktivität ermöglicht es, andere Teilnehmende besser kennen zu lernen und sich auch von seiner privaten Seite zu zeigen. Sie laden Fotos und einen kurzen Text hoch, die das Wesentliche eines vorgegebenen Themas einfangen.",
     },
     {
       title: "Reflexion",
@@ -71,10 +71,10 @@ export default {
       title: "Bibliothek",
       illustration: "library",
       description:
-        "Dies ist eine Sammlung audiovisueller Materialien, die typischerweise von Kunden bereitgestellt werden und darauf abzielt, selbstgesteuertes Lernen zu fördern und das Wissen zu ergänzen. Das können Dokumente sein wie Skripte und Nachschlagewerke oder Videos, Tonaufnahmen und Links zu externen oder internen Quellen. Idealerweise werden diese gestaffelt veröffentlicht, um Prokrastination zu vermeiden.",
+        "Dies ist eine Sammlung audiovisueller Materialien, die typischerweise  von Kunden bereitgestellt werden und darauf abzielt, selbstgesteuertes Lernen zu fördern und das Wissen zu ergänzen. Das können Dokumente sein wie Skripte und Nachschlagewerke oder Videos, Tonaufnahmen und Links zu externen oder internen Quellen.",
     },
     {
-      title: "Abzeichen",
+      title: "Abzeichen (Badges)",
       illustration: "achievements",
       description:
         "Lernende, die gewisse Meilensteine erreicht haben, erhalten Abzeichen wie z.B. exklusive Avatare als Anerkennung für ihre Anstrengungen und zur Förderung eines Gefühls des Fortschritts. Sie können diese Abzeichen sammeln und ein spezielles Set vervollständigen.",
