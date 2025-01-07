@@ -18,7 +18,7 @@ export default {
       title: "Frage der Woche",
       illustration: "qotw",
       description:
-        "Die Frage der Woche dient zur Auflockerung und soll motivieren, in ein Themengebiet tiefer einzutauchen. Wörter, Phrasen oder Bilder werden täglich teilweise enthüllt und laden dazu ein, ein Rätsel kollaborativ zu lösen.",
+        "Die Frage der Woche soll Teilnehmende motivieren, in ein Themengebiet tiefer ein zu tauchen. Wörter, Phrasen oder Bilder werden täglich teilweise enthüllt und laden dazu ein, ein Rätsel kollaborativ zu lösen.",
     },
     {
       title: "Foto-Event",
