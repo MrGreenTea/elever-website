@@ -4,7 +4,7 @@ export default {
   title: "Modules",
   description: [
     "Micro learning and gamification enhance learning habits by breaking down content into small, digestible segments and making it interactive and fun. This is the Elever philosophy.",
-    "We have created games and modules that can adapt to specific content, allowing students to enjoy a dynamic yet effective learning experience.",
+    "We have developed game sequences and modules that can be adapted to specific content. These are designed to provide learners with a dynamic yet impactful learning experience.",
   ],
   gamesTitle: "Games & challenges",
   games: [
@@ -24,7 +24,7 @@ export default {
       title: "Photo Event",
       illustration: "photoevent",
       description:
-        "The Photo Event also serves as a light-hearted activity. This activity allows participants to get to know each other better and to show a more personal side. They upload photos and text that capture the essence of a given theme.",
+        "This activity allows participants to get to know each other better and to show a more personal side. They upload photos and text that capture the essence of a given theme.",
     },
     {
       title: "Reflection",
@@ -71,7 +71,7 @@ export default {
       title: "Library",
       illustration: "library",
       description:
-        "This is a collection of audiovisual materials, typically provided by clients, aimed at promoting self-directed learning and supplementing knowledge. The library can contain documents such as scripts, reference works, videos, audio recordings, or links to external or internal sources. Ideally, these resources are released in stages to help prevent procrastination.",
+        "This is a collection of audiovisual materials, typically provided by clients, aimed at promoting self-directed learning and supplementing knowledge. The library can contain documents such as scripts, reference works, videos, audio recordings, or links to external or internal sources.",
     },
     {
       title: "Badges",
