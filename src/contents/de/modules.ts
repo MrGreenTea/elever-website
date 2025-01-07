@@ -47,16 +47,16 @@ export default {
       title: "Fitness Check",
       illustration: "assessment",
       description:
-        "Der Fitness Check ist eine andere Art Quiz, das eher einen Test-Charakter hat. Er dokumentiert den Anfangsstand vor einer Lerneinheit, das Zwischenergebnis oder schliesst eine Lerneinheit mit einer Bewertung ab. Basierend auf den Ergebnissen der Lernenden generiert er ein umfassendes Radar-Chart-Diagramm (Spinnen-Diagramm), das visuell Stärken und Bereiche mit Entwicklungsbedarf aufzeigt. Besonders spannend ist für Lernende der Vergleich zu einer vorher abgefragten Selbsteinschätzung zu jedem Themenblock. Jeder Themenblock schliesst mit Hinweisen für weitere Lernangebote ab. So können Teilnehmende gezielt für sie besonders interessante oder weniger starke Themen vertiefen.",
+        "Der Fitness hat eine Art Test-Charakter hat. Er dokumentiert den Stand vor, währned oder nach einer Lerneinheit. Basierend auf den Ergebnissen generiert er ein umfassendes Radar-Chart-Diagramm (Spinnen-Diagramm). Besonders spannend ist für Lernende der Vergleich zu einer vorher abgefragten Selbsteinschätzung zu jedem Themenblock. Jeder Themenblock schliesst mit Hinweisen für weitere Lernangebote ab.",
     },
     {
       title: "Chat",
       illustration: "chat",
       description:
-        "Diese Funktion gibt den Ausbildenden die Möglichkeit, rechtzeitiges Feedback zu geben, Fragen schnell zu beantworten und gezielte Anleitungen zu geben. Insbesondere in einem Umfeld, in dem typische Chat-Programme nicht etabliert sind. Z.B. kann ein Pre-Onboarding Programm für neue Mitarbeitende noch vor dem Eintritt in die Unternehmung mit dem Chat begleitet werden.",
+        "Diese Funktion gibt den Lehrenden die Möglichkeit, rechtzeitiges Feedback zu geben, Fragen schnell zu beantworten und gezielte Anleitungen zu geben. Insbesondere in einem Umfeld, in dem andere Chat-Programme nicht etabliert sind. Z.B. kann ein Pre-Onboarding Programm für neue Mitarbeitende noch vor dem Eintritt in die Unternehmung mit dem Chat begleitet werden.",
     },
     {
-      title: "Ranglisten & Team Ranglisten",
+      title: "Ranglisten",
       illustration: "leaderboard",
       description:
         "Das Hinzufügen der individuellen Rangliste und der Team Rangliste kann die Teilnahme der Lernenden aus didaktischer Sicht erheblich steigern. Diese Funktion verwandelt individuelle Lernanstrengungen in ein motivierendes gemeinschaftliches Erlebnis.",
