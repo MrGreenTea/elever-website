@@ -15,10 +15,13 @@ $options = [
   ],
 ];
 $context = stream_context_create($options);
-$responseJson = json_decode(file_get_contents($hcaptcha_verify_url, false, $context));
+$response = file_get_contents($hcaptcha_verify_url, false, $context);
+$responseJson = json_decode($response);
 $success = $responseJson->{'success'};
 
 if (!$success) {
+  error_log(print_r($data, true));
+  error_log($response);
   echo "THIS DID NOT WORK";
   return;
 }
