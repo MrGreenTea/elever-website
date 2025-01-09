@@ -1,12 +1,12 @@
 <?php
   $env = parse_ini_file("~/.php-env");
-  $hcaptcha_verify_url = 'https://api.hcaptcha.com/siteverify'
+  $hcaptcha_verify_url = 'https://api.hcaptcha.com/siteverify';
   $data = [
     'response' => $_POST["h-captcha-response"],
     'secret' => $env["HCAPTCHA_SECRET"],
     'remoteip' => $_SERVER['REMOTE_ADDR'],
     'sitekey' => 'f1a24450-5f46-43b6-93f8-a6dec6746c76'
-  ]
+  ];
   $options = [
       'http' => [
           'header' => "Content-type: application/x-www-form-urlencoded\r\n",
