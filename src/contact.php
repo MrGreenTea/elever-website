@@ -15,11 +15,11 @@ $options = [
   ],
 ];
 $context = stream_context_create($options);
-$success = json_decode(
-  file_get_contents($hcaptcha_verify_url, false, $context)
-)->{'success'};
+$responseJson = json_decode(file_get_contents($hcaptcha_verify_url, false, $context));
+$success = $responseJson->{'success'};
+
 if (!$success) {
-  return;
+  return "THIS DID NOT WORK";
 }
 
 $name = $_POST["name"];
@@ -49,12 +49,6 @@ $success = mail($to, $subject, implode("<br/>", $emailMessage), implode("\n", $h
 ?>
 
 <html>
-
-<head>
-  <title>
-    Contact
-  </title>
-</head>
 
 <body>
   <div>
