@@ -15,7 +15,9 @@ $options = [
   ],
 ];
 $context = stream_context_create($options);
-$success = json_decode(file_get_contents($hcaptcha_verify_url, false, $context))['success'];
+$success = json_decode(
+  file_get_contents($hcaptcha_verify_url, false, $context)
+)->{'success'};
 if (!$success) {
   return;
 }
