@@ -1,5 +1,5 @@
 <?php
-$ini = parse_ini_file("/home/elever/.php-env");
+$ini = parse_ini_file("/home/altusforge/.php-env");
 $hcaptcha_verify_url = 'https://api.hcaptcha.com/siteverify';
 $data = [
   'response' => $_POST["h-captcha-response"],
