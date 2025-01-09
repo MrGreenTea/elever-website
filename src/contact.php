@@ -1,9 +1,9 @@
 <?php
-$env = parse_ini_file("~/.php-env");
+$ini = parse_ini_file("~/.php-env");
 $hcaptcha_verify_url = 'https://api.hcaptcha.com/siteverify';
 $data = [
   'response' => $_POST["h-captcha-response"],
-  'secret' => $env["HCAPTCHA_SECRET"],
+  'secret' => $ini["HCAPTCHA_SECRET"],
   'remoteip' => $_SERVER['REMOTE_ADDR'],
   'sitekey' => 'f1a24450-5f46-43b6-93f8-a6dec6746c76'
 ];
@@ -20,7 +20,7 @@ $responseJson = json_decode($response);
 $success = $responseJson->{'success'};
 
 if (!$success) {
-  error_log(print_r($_POST));
+  error_log(print_r($_POST, true));
   error_log(print_r($data, true));
   error_log($response);
   echo "THIS DID NOT WORK";
