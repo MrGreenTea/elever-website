@@ -19,7 +19,8 @@ $responseJson = json_decode(file_get_contents($hcaptcha_verify_url, false, $cont
 $success = $responseJson->{'success'};
 
 if (!$success) {
-  return "THIS DID NOT WORK";
+  echo "THIS DID NOT WORK";
+  return;
 }
 
 $name = $_POST["name"];
