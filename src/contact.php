@@ -20,11 +20,7 @@ $responseJson = json_decode($response);
 $success = $responseJson->{'success'};
 
 if (!$success) {
-  error_log(print_r($ini, true));
-  error_log(print_r($_POST, true));
-  error_log(print_r($data, true));
-  error_log($response);
-  echo "THIS DID NOT WORK";
+  echo "THIS DID NOT WORK. Please try again.";
   return;
 }
 
