@@ -52,11 +52,11 @@ $success = mail($to, $subject, implode("<br/>", $emailMessage), implode("\n", $h
 
 <body>
   <div>
-    <? if ($success) { ?>
-    <p>Thank you for your message</p>
-    <? } else { ?>
-    <p>That didn't work. Please try again.</p>
-    <? } ?>
+    <?php if ($success): ?>
+      <p>Thank you for contacting us</p>
+    <?php else: ?>
+      <p>That didn't work. Please try again.</p>
+    <?php endif ?>
   </div>
 </body>
 
