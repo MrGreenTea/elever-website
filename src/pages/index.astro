@@ -39,6 +39,14 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{content.title}</title>
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Elever",
+        "url": "https://elever.ch/"
+      }
+    </script>
   </head>
   <body class="bg-background text-white">
     <Navbar currentPage="/" lang={lang} />
