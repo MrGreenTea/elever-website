@@ -10,7 +10,7 @@ export default {
     title: "Die Elever App",
     subtitle: "Transformieren Sie Lernroutinen",
     description:
-      "Etablieren Sie dauerhafte Gewohnheiten. Spielerisch und mit einer mobilen App.",
+      "Etablieren Sie dauerhafte Gewohnheiten.\nSpielerisch und mit einer mobilen App.",
     callToAction: "Demo Zugang anfragen",
   },
   valueProposition: {

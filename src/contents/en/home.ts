@@ -9,7 +9,7 @@ export default {
   hero: {
     title: "The Elever App",
     subtitle: "Transform learning routines",
-    description: "Establish lasting habits. Playfully and with a mobile app.",
+    description: "Establish lasting habits.\nPlayfully and with a mobile app.",
     callToAction: "Request demo access",
   },
   valueProposition: {
