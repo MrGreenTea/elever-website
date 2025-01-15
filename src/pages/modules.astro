@@ -51,6 +51,11 @@ const toolsIllustrations: Map<string, ImageMetadata> = new Map(
         "url": "https://elever.ch/"
       }
     </script>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elever.ch/modules" />
+    <meta property="og:title" content={content.meta.title} />
+    <meta property="og:description" content={content.meta.description} />
+    <meta property="og:image" content="https://elever.ch/images/poster.png" />
   </head>
   <body class="bg-background text-white">
     <Navbar class="bg-[#020C57]" currentPage="/modules" lang={lang} />
