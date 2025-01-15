@@ -38,7 +38,8 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{content.title}</title>
+    <title>{content.meta.title}</title>
+    <meta name="description" content={content.meta.description} />
     <script is:inline type="application/ld+json">
       {
         "@context": "https://schema.org",
