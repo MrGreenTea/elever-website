@@ -41,7 +41,8 @@ const toolsIllustrations: Map<string, ImageMetadata> = new Map(
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{content.title}</title>
+    <title>{content.meta.title}</title>
+    <meta name="description" content={content.meta.description} />
     <script is:inline type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -57,11 +58,13 @@ const toolsIllustrations: Map<string, ImageMetadata> = new Map(
     <main>
       <section class="bg-[#020C57] px-14 pt-10">
         <div class="mx-auto max-w-7xl lg:mt-40">
-          <h1 class="text-5xl font-semibold lg:text-8xl">{content.title}</h1>
+          <h1 class="text-5xl font-semibold lg:text-8xl">
+            {content.hero.title}
+          </h1>
           <div
             class="mt-8 flex flex-col gap-y-4 text-sm lg:gap-y-8 lg:px-36 lg:pt-14 lg:text-2xl"
           >
-            {content.description.map((p) => <p>{p}</p>)}
+            {content.hero.description.map((p) => <p>{p}</p>)}
           </div>
           <Image
             class="mx-auto mt-9 lg:mt-32"

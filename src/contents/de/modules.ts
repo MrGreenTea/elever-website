@@ -1,11 +1,18 @@
 import type { Content } from "../types/modules";
 
 export default {
-  title: "Module",
-  description: [
-    "Microlearning und Gamification verändern Lerngewohnheiten auf positive Weise, indem Inhalte in kleine, leicht verdauliche Einheiten unterteilt und interaktiv sowie unterhaltsam gestaltet werden. Das ist die Philosophie von Elever.",
-    "Wir haben Spielfolgen und Module entwickelt, die sich an spezifische Inhalte anpassen lassen. Diese sind darauf ausgelegt, den Lernenden ein dynamisches und zugleich wirkungsvolles Lernerlebnis zu bieten.",
-  ],
+  meta: {
+    title: "Elever Module",
+    description:
+      "Interagieren Sie mit Modulen, die effektives Lernen, Teamarbeit und Wissenstransfer fördern.",
+  },
+  hero: {
+    title: "Module",
+    description: [
+      "Microlearning und Gamification verändern Lerngewohnheiten auf positive Weise, indem Inhalte in kleine, leicht verdauliche Einheiten unterteilt und interaktiv sowie unterhaltsam gestaltet werden. Das ist die Philosophie von Elever.",
+      "Wir haben Spielfolgen und Module entwickelt, die sich an spezifische Inhalte anpassen lassen. Diese sind darauf ausgelegt, den Lernenden ein dynamisches und zugleich wirkungsvolles Lernerlebnis zu bieten.",
+    ],
+  },
   gamesTitle: "Spiele & Herausforderungen",
   games: [
     {
