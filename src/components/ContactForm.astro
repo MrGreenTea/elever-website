@@ -116,17 +116,17 @@ const { content } = Astro.props;
     <Image src={ContactBanner} alt="" />
     <div class="text-center">
       <h3 class="mb-4 text-4xl font-bold text-purple-medium lg:text-8xl">
-        Thank you!
+        {content.success.title}
       </h3>
       <p class="mb-6 text-purple-bright">
-        Your message has been sent successfully.
+        {content.success.message}
       </p>
     </div>
     <button
       id="close-popup"
       class="bg-primary inline-flex w-fit min-w-36 items-center justify-center gap-x-1.5 rounded-md border border-white bg-grey-dark px-8 py-4 text-center text-sm text-white shadow-sm hover:bg-grey-medium active:bg-grey-darkest"
     >
-      Close
+      {content.success.closeButton}
     </button>
   </div>
 </div>

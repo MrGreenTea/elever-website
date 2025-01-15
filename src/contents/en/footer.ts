@@ -16,6 +16,11 @@ export default {
       message: "Message",
     },
     button: "Send",
+    success: {
+      title: "Thank You!",
+      message: "Your message has been sent",
+      closeButton: "Close",
+    },
   },
   footer: {
     productBy: "A product by",
