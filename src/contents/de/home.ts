@@ -1,7 +1,11 @@
 import type { Content } from "../types/home.ts";
 
 export default {
-  title: "Startseite",
+  meta: {
+    title: "Elever",
+    description:
+      "Interagieren Sie mit Modulen, die effektives Lernen, Teamarbeit und Wissenstransfer fördern.",
+  },
   hero: {
     title: "Die Elever App",
     subtitle: "Transformieren Sie Lernroutinen",

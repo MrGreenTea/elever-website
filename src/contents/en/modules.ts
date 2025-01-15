@@ -1,11 +1,18 @@
 import type { Content } from "../types/modules";
 
 export default {
-  title: "Modules",
-  description: [
-    "Micro learning and gamification enhance learning habits by breaking down content into small, digestible segments and making it interactive and fun. This is the Elever philosophy.",
-    "We have developed game sequences and modules that can be adapted to specific content. These are designed to provide learners with a dynamic yet impactful learning experience.",
-  ],
+  meta: {
+    title: "Elever Modules",
+    description:
+      "Interact with modules designed to promote effective learning, team collaboration and knowledge transfer.",
+  },
+  hero: {
+    title: "Modules",
+    description: [
+      "Micro learning and gamification enhance learning habits by breaking down content into small, digestible segments and making it interactive and fun. This is the Elever philosophy.",
+      "We have developed game sequences and modules that can be adapted to specific content. These are designed to provide learners with a dynamic yet impactful learning experience.",
+    ],
+  },
   gamesTitle: "Games & challenges",
   games: [
     {

@@ -1,7 +1,11 @@
 import type { Content } from "../types/home.ts";
 
 export default {
-  title: "Home",
+  meta: {
+    title: "Elever - Engage your peers with your organiztion!",
+    description:
+      "Interact with modules designed to promote effective learning, team collaboration and knowledge transfer. ",
+  },
   hero: {
     title: "The Elever App",
     subtitle: "Transform learning routines",

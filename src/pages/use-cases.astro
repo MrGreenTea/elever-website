@@ -29,7 +29,21 @@ const {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{content.title}</title>
+    <title>{content.meta.title}</title>
+    <meta name="description" content={content.meta.description} />
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Elever",
+        "url": "https://elever.ch/"
+      }
+    </script>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elever.ch/use-cases" />
+    <meta property="og:title" content={content.meta.title} />
+    <meta property="og:description" content={content.meta.description} />
+    <meta property="og:image" content="https://elever.ch/images/poster.png" />
   </head>
   <body class="w-full bg-background text-white">
     <Navbar class="bg-[#33107E]" currentPage="/use-cases" lang={lang} />
@@ -37,12 +51,12 @@ const {
       <div class="mx-auto max-w-7xl">
         <div class="px-7">
           <h1 class="hyphens-auto text-5xl font-semibold lg:text-8xl">
-            {content.title}
+            {content.hero.title}
           </h1>
           <p
             class="mx-auto mt-8 max-w-prose text-sm leading-6 lg:mt-20 lg:text-2xl"
           >
-            {content.description}
+            {content.hero.description}
           </p>
         </div>
         <Image

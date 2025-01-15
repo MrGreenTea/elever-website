@@ -38,7 +38,21 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{content.title}</title>
+    <title>{content.meta.title}</title>
+    <meta name="description" content={content.meta.description} />
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Elever",
+        "url": "https://elever.ch/"
+      }
+    </script>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elever.ch/" />
+    <meta property="og:title" content={content.meta.title} />
+    <meta property="og:description" content={content.meta.description} />
+    <meta property="og:image" content="https://elever.ch/images/poster.png" />
   </head>
   <body class="bg-background text-white">
     <Navbar currentPage="/" lang={lang} />

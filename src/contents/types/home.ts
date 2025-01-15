@@ -1,5 +1,8 @@
 export type Content = {
-  title: string;
+  meta: {
+    title: string;
+    description: string;
+  };
   hero: {
     title: string;
     subtitle: string;

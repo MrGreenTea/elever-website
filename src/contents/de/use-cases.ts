@@ -1,9 +1,16 @@
 import type { Content } from "../types/use-cases";
 
 export default {
-  title: "Anwendungsfälle",
-  description:
-    "Elever hat fast ein Jahrzehnt lang mit über 30 Institutionen zusammengearbeitet und das Lernen von 150.000 Lernenden beeinflusst. Hier sind einige unserer jüngsten Anwendungsfälle.",
+  meta: {
+    title: "Elever Anwendungsfälle",
+    description:
+      "Interagieren Sie mit Modulen, die effektives Lernen, Teamarbeit und Wissenstransfer fördern.",
+  },
+  hero: {
+    title: "Anwendungsfälle",
+    description:
+      "Elever hat fast ein Jahrzehnt lang mit über 30 Institutionen zusammengearbeitet und das Lernen von 150.000 Lernenden beeinflusst. Hier sind einige unserer jüngsten Anwendungsfälle.",
+  },
   sectionLabels: {
     participants: "Teilnehmende",
     modules: "Module",
