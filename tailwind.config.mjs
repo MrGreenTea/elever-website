@@ -35,6 +35,7 @@ export default {
       cyan: "#17A79A",
       purple: {
         dark: "#39227F",
+        medium: "#7E47FF",
         light: "#906DFD",
         bright: "#B59DFF",
       },

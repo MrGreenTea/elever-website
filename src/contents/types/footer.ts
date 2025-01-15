@@ -11,6 +11,11 @@ export type Content = {
       message: string;
     };
     button: string;
+    success: {
+      title: string;
+      message: string;
+      closeButton: string;
+    };
   };
   footer: {
     productBy: string;
