@@ -1,9 +1,16 @@
 import type { Content } from "../types/use-cases";
 
 export default {
-  title: "Use Cases",
-  description:
-    "Elever has collaborated with over 30 institutions for nearly a decade, impacting the learning of 150,000 learners. Here are some of our more recent use cases.",
+  meta: {
+    title: "Elever Use Cases",
+    description:
+      "Interact with modules designed to promote effective learning, team collaboration and knowledge transfer.",
+  },
+  hero: {
+    title: "Use Cases",
+    description:
+      "Elever has collaborated with over 30 institutions for nearly a decade, impacting the learning of 150,000 learners. Here are some of our more recent use cases.",
+  },
   sectionLabels: {
     participants: "Participants",
     modules: "Modules",

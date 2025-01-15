@@ -6,8 +6,14 @@ type UseCase = {
 };
 
 export type Content = {
-  title: string;
-  description: string;
+  meta: {
+    title: string;
+    description: string;
+  };
+  hero: {
+    title: string;
+    description: string;
+  };
   sectionLabels: {
     participants: string;
     modules: string;
