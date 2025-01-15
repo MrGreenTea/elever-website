@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+
+import ContactBanner from "../assets/contact_success_banner.svg";
 import type { Content } from "../contents/types/footer.ts";
 
 interface Props {
@@ -6,6 +9,39 @@ interface Props {
 }
 const { content } = Astro.props;
 ---
+
+<script>
+  // I've decided to not use any framework for this form.
+  // but if the website becomes more complex we'll use svelte probably
+  const form = document.querySelector("form");
+  const successPopup = document.getElementById("success-popup");
+  const closePopup = document.getElementById("close-popup");
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch("/contact.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        successPopup?.classList.remove("hidden");
+        successPopup?.classList.add("flex");
+        form.reset();
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  });
+
+  closePopup?.addEventListener("click", () => {
+    successPopup?.classList.add("hidden");
+    successPopup?.classList.remove("flex");
+  });
+</script>
 
 <form action="/contact.php" method="POST">
   <div class="grid grid-cols-1 gap-7 lg:grid-cols-2">
@@ -57,9 +93,6 @@ const { content } = Astro.props;
       name="message"
       required
       placeholder={content.fields.message}></textarea>
-
-    <div class="h-captcha" data-sitekey="f1a24450-5f46-43b6-93f8-a6dec6746c76">
-    </div>
   </div>
 
   <input
@@ -68,3 +101,29 @@ const { content } = Astro.props;
     class="bg-primary hover:bg-grey mt-11 inline-flex w-full items-center justify-center gap-x-1.5 rounded-md border border-white bg-grey-dark px-8 py-4 text-sm text-white shadow-sm hover:bg-grey-medium active:bg-grey-darkest lg:mt-10 lg:max-w-48"
   />
 </form>
+
+<!-- Success Popup -->
+<div
+  id="success-popup"
+  class="bg-black fixed inset-0 hidden items-center justify-center bg-opacity-50 px-7 pb-7 pt-20"
+>
+  <div
+    class="flex h-full w-full max-w-5xl flex-col items-center justify-between rounded-lg border border-purple-light bg-[#081111] px-10 pb-16 pt-36 shadow-xl"
+  >
+    <Image src={ContactBanner} alt="" />
+    <div class="text-center">
+      <h3 class="mb-4 text-4xl font-bold text-purple-medium lg:text-8xl">
+        Thank you!
+      </h3>
+      <p class="mb-6 text-purple-bright">
+        Your message has been sent successfully.
+      </p>
+    </div>
+    <button
+      id="close-popup"
+      class="bg-primary inline-flex w-fit min-w-36 items-center justify-center gap-x-1.5 rounded-md border border-white bg-grey-dark px-8 py-4 text-center text-sm text-white shadow-sm hover:bg-grey-medium active:bg-grey-darkest"
+    >
+      Close
+    </button>
+  </div>
+</div>
