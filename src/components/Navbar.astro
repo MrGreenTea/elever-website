@@ -22,7 +22,12 @@ const content = lang === "en" ? englishContent : germanContent;
   >
     <!-- Logo -->
     <a href="/" aria-label="Home">
-      <Image class="h-8" src={EleverLogo} alt="Elever by AltusForge" />
+      <Image
+        class="h-8"
+        src={EleverLogo}
+        alt="Elever by AltusForge"
+        loading="eager"
+      />
     </a>
 
     <!-- Hamburger icon -->
