@@ -16,6 +16,9 @@ export type Content = {
       message: string;
       closeButton: string;
     };
+    error: {
+      message: string;
+    };
   };
   footer: {
     productBy: string;

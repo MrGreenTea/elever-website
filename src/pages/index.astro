@@ -241,7 +241,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
 
     <script
       is:inline
-      src={`https://js.hcaptcha.com/1/api.js?hl=${lang}`}
+      src={`https://challenges.cloudflare.com/turnstile/v0/api.js?language=${lang}`}
       async
       defer></script>
   </body>

@@ -21,6 +21,10 @@ export default {
       message: "Your message has been sent",
       closeButton: "Close",
     },
+    error: {
+      message:
+        "Something went wrong, please try again. Please refresh the page if the problem persists.",
+    },
   },
   footer: {
     productBy: "A product by",
