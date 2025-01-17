@@ -1,11 +1,11 @@
 <?php
 $ini = parse_ini_file("/home/eleverch/.php-env");
-$hcaptcha_verify_url = 'https://api.hcaptcha.com/siteverify';
+$captcha_verify_url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
 $data = [
-  'response' => $_POST["h-captcha-response"],
-  'secret' => $ini["HCAPTCHA_SECRET"],
+  'response' => $_POST["cf-turnstile-response"],
+  'secret' => $ini["CAPTCHA_SECRET"],
   'remoteip' => $_SERVER['REMOTE_ADDR'],
-  'sitekey' => 'f1a24450-5f46-43b6-93f8-a6dec6746c76'
+  'sitekey' => '0x4AAAAAAA5i8vg6cCYjfUzh'
 ];
 $options = [
   'http' => [
@@ -15,11 +15,12 @@ $options = [
   ],
 ];
 $context = stream_context_create($options);
-$response = file_get_contents($hcaptcha_verify_url, false, $context);
+$response = file_get_contents($captcha_verify_url, false, $context);
 $responseJson = json_decode($response);
 $success = $responseJson->{'success'};
 
 if (!$success) {
+  http_response_code(400);
   echo "THIS DID NOT WORK. Please try again.";
   return;
 }
@@ -48,6 +49,9 @@ $headers[] = "MIME-Version: 1.0";
 $headers[] = "Content-type: text/html; charset=UTF-8";
 
 $success = mail($to, $subject, implode("<br/>", $emailMessage), implode("\n", $headers));
+if (!$success) {
+  http_response_code(400);
+}
 ?>
 
 <html>
