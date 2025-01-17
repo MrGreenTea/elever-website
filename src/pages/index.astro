@@ -80,6 +80,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
               src={HeroIllustration}
               alt="Illustration of people using the Elever app"
               class="mt-3 max-h-[48rem] w-full flex-1"
+              loading="eager"
             />
             <div class="mt-10 lg:hidden">
               <Button href="#contact-form">{content.hero.callToAction}</Button>
