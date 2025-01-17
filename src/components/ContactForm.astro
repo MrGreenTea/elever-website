@@ -28,18 +28,20 @@ const { content } = Astro.props;
       });
 
       if (response.ok) {
-        successPopup?.classList.remove("hidden");
-        successPopup?.classList.add("flex");
+        successPopup?.classList.replace("hidden", "flex");
+        document.getElementById("error-message")?.classList.add("hidden");
         form.reset();
+      } else {
+        throw new Error(response.statusText);
       }
     } catch (error) {
-      console.error("Error:", error);
+      document.getElementById("error-message")?.classList.remove("hidden");
+      console.error(error);
     }
   });
 
   closePopup?.addEventListener("click", () => {
-    successPopup?.classList.add("hidden");
-    successPopup?.classList.remove("flex");
+    successPopup?.classList.replace("flex", "hidden");
   });
 </script>
 
@@ -97,6 +99,9 @@ const { content } = Astro.props;
     <div class="cf-turnstile" data-sitekey="0x4AAAAAAA5i8vg6cCYjfUzh"></div>
   </div>
 
+  <p class="hidden px-2 py-3 text-red-medium" id="error-message">
+    {content.error.message}
+  </p>
   <input
     type="submit"
     value={content.button}

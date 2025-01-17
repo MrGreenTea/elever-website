@@ -21,6 +21,10 @@ export default {
       message: "Ihre Nachricht wurde gesendet",
       closeButton: "Schließen",
     },
+    error: {
+      message:
+        "Etwas ist schief gelaufen, bitte versuchen Sie es erneut. Bitte aktualisieren Sie die Seite, wenn das Problem weiterhin besteht.",
+    },
   },
   footer: {
     productBy: "Ein Produkt von",

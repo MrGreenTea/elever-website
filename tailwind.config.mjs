@@ -39,6 +39,9 @@ export default {
         light: "#906DFD",
         bright: "#B59DFF",
       },
+      red: {
+        medium: "#FF7E7E",
+      },
       transparent: "transparent",
       current: "currentColor",
     },
