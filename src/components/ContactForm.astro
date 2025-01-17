@@ -6,8 +6,9 @@ import type { Content } from "../contents/types/footer.ts";
 
 interface Props {
   content: Content["contact"];
+  lang: "de" | "en";
 }
-const { content } = Astro.props;
+const { content, lang } = Astro.props;
 ---
 
 <script>
@@ -31,6 +32,9 @@ const { content } = Astro.props;
         successPopup?.classList.replace("hidden", "flex");
         document.getElementById("error-message")?.classList.add("hidden");
         form.reset();
+        // Turnstile add this to the global scope
+        // @ts-expect-error
+        turnstile?.reset();
       } else {
         throw new Error(response.statusText);
       }
@@ -96,7 +100,12 @@ const { content } = Astro.props;
       required
       placeholder={content.fields.message}></textarea>
 
-    <div class="cf-turnstile" data-sitekey="0x4AAAAAAA5i8vg6cCYjfUzh"></div>
+    <div
+      class="cf-turnstile"
+      data-sitekey="0x4AAAAAAA5i8vg6cCYjfUzh"
+      data-language={lang}
+    >
+    </div>
   </div>
 
   <p class="hidden px-2 py-3 text-red-medium" id="error-message">
