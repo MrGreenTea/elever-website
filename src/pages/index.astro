@@ -8,6 +8,18 @@ import Divider from "../components/Divider.astro";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 
+import EleverAppScreenShot1DE from "../assets/screenshots/DE/im_de_interface_01_flatten.png";
+import EleverAppScreenShot2DE from "../assets/screenshots/DE/im_de_interface_02_flatten.png";
+import EleverAppScreenShot3DE from "../assets/screenshots/DE/im_de_interface_03_flatten.png";
+import EleverAppScreenShot4DE from "../assets/screenshots/DE/im_de_interface_04_flatten.png";
+import DesktopScreenshot1DE from "../assets/screenshots/DE/im_de_interface_cms_01.png";
+import DesktopScreenshot2DE from "../assets/screenshots/DE/im_de_interface_cms_02.png";
+
+import EleverAppScreenShot1EN from "../assets/screenshots/EN/im_interface_01_flatten.png";
+import EleverAppScreenShot2EN from "../assets/screenshots/EN/im_interface_02_flatten.png";
+import EleverAppScreenShot3EN from "../assets/screenshots/EN/im_interface_03_flatten.png";
+import EleverAppScreenShot4EN from "../assets/screenshots/EN/im_interface_04_flatten.png";
+
 import Builders from "../assets/SVG/im_automation.svg";
 import HeroIllustration from "../assets/SVG/im_cover.svg";
 import ForgettingCurve from "../assets/SVG/im_forgetting-curve.svg";
@@ -28,8 +40,21 @@ const {
   lang = (Astro.currentLocale ?? "de") as "de" | "en",
 }: Props = Astro.props;
 
-const moduleIllustrations = await Astro.glob("../assets/modules/*.png");
-const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
+const moduleIllustrations =
+  lang === "en"
+    ? [
+        EleverAppScreenShot1EN,
+        EleverAppScreenShot2EN,
+        EleverAppScreenShot3EN,
+        EleverAppScreenShot4EN,
+      ]
+    : [
+        EleverAppScreenShot1DE,
+        EleverAppScreenShot2DE,
+        EleverAppScreenShot3DE,
+        EleverAppScreenShot4DE,
+      ];
+const desktopScreenshots = [DesktopScreenshot1DE, DesktopScreenshot2DE];
 ---
 
 <html lang={lang}>
@@ -167,7 +192,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
                 moduleIllustrations.map((module) => (
                   <Image
                     class="w-full even:mt-16"
-                    src={module.default}
+                    src={module}
                     widths={[296, 592, 760, 900]}
                     sizes="(min-width: 1480px) 296px, (min-width: 1040px) 21vw, calc(50vw - 62px)"
                     alt="Elever screenshot"
@@ -208,7 +233,7 @@ const desktopScreenshots = await Astro.glob("../assets/screenshots/*.png");
                 desktopScreenshots.map((screenshot) => (
                   <Image
                     class="mt-10 w-full lg:mt-0 lg:even:mt-40"
-                    src={screenshot.default}
+                    src={screenshot}
                     widths={[256, 616, 900, 1112, 1232, 1450, 1650, 1820]}
                     sizes="(min-width: 1480px) 616px, (min-width: 1040px) 42vw, calc(100vw - 112px)"
                     alt="Elever screenshot"
