@@ -24,5 +24,6 @@ export type Content = {
     productBy: string;
     address: string[];
     handelsRegisterLabel: string;
+    dataProtectionPolicy: string;
   };
 };
