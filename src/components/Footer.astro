@@ -58,24 +58,36 @@ const content = lang === "en" ? englishContent : germanContent;
         alt="Illustration of people flying in a paper plane."
       />
     </div>
-    <div class="mt-14">
-      <span class="text-xl">{content.footer.productBy}</span>
-    </div>
-    <Image class="mt-5" src={AltusForgeLogo} alt="Altus Forge logo" />
-    <address class="mt-16 text-sm leading-relaxed lg:text-lg">
-      {
-        content.footer.address.map((line) => (
-          <>
-            {line}
-            <br />
-          </>
-        ))
-      }
-    </address>
-    <div class="mt-3">
-      <a class="text-3xl text-cyan" href="https://altusforge.com"
-        >altusforge.com</a
-      >
+
+    <div
+      class="mt-12 grid grid-cols-1 gap-5 lg:mt-32 lg:grid-cols-[75%_25%] lg:gap-10 lg:text-xs"
+    >
+      <span>{content.footer.productBy} Altus Forge GmbH</span>
+
+      <Image class="" src={AltusForgeLogo} alt="Altus Forge logo" class="" />
+      <div class="lg:col-span-2">
+        <h2 class="text-cyan">Address</h2>
+        <address class="leading-relaxed lg:text-sm">
+          {
+            content.footer.address.map((line) => (
+              <>
+                {line}
+                <br />
+              </>
+            ))
+          }
+        </address>
+      </div>
+      <p class="lg:col-span-2">
+        Commercial Register Entry: CHE-495.592.707 | Represented by: Thomas Hayk
+        and David Guevara (both Managing Directors).
+      </p>
+      <div class="">
+        <a href="/datenschutz" class="text-cyan">Datenschutzerkl&auml;rung</a>
+      </div>
+      <p>
+        © {new Date().getFullYear()} Elever. All Rights Reserved.
+      </p>
     </div>
   </div>
 </footer>
