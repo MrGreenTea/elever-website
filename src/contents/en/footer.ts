@@ -33,5 +33,6 @@ export default {
       "Heinrichstrasse 267a",
       "8005 Zürich, Switzerland",
     ],
+    handelsRegisterLabel: "Commercial Register Entry",
   },
 } satisfies Content;
