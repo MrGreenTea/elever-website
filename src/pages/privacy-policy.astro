@@ -1,0 +1,244 @@
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+
+interface Props {
+  lang: "en" | "de";
+}
+const { lang = (Astro.currentLocale ?? "de") as "de" | "en" }: Props =
+  Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Privacy Policy</title>
+    <meta name="description" content="Elever's Privacy Policy" />
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Elever",
+        "url": "https://elever.ch/"
+      }
+    </script>
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://elever.ch/use-cases" />
+    <meta property="og:title" content="Privacy Policy" />
+    <meta property="og:description" content="Elever's Privacy Policy" />
+    <meta property="og:image" content="https://elever.ch/images/poster.png" />
+  </head>
+
+  <body id="page-top" class="bg-background text-white">
+    <Navbar currentPage="/privacy-policy" lang={lang} />
+
+    <main class="pt-10 lg:mt-40">
+      <section id="privacy" class="mx-auto max-w-7xl">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <h1 class="text-5xl font-semibold lg:text-8xl">Privacy Policy</h1>
+              <div
+                class="mt-8 flex flex-col gap-y-4 text-sm lg:gap-y-8 lg:px-36 lg:pt-14 lg:text-2xl"
+              >
+                <p>
+                  <b>Altus Forge GmbH</b> built the <b>Elever</b> app to be displayed
+                  in the relevant app store as a Free app. This SERVICE is provided
+                  by <b>Altus Forge GmbH</b> to partners and solicitors via our business
+                  contact. No access can be acquired by non-registered users via
+                  the app store.
+                </p>
+                <p>
+                  This page is used to inform visitors regarding our policies
+                  with the collection, use, and disclosure of Personal
+                  Information if anyone decided to use our Service.
+                </p>
+                <p>
+                  If you choose to use our Service, then you agree to the
+                  collection and use of information in relation to this policy.
+                  The Personal Information that we collect is used for providing
+                  and improving the Service. We will not use or share your
+                  information with anyone except as described in this Privacy
+                  Policy.
+                </p>
+                <p>
+                  The terms used in this Privacy Policy have the same meanings
+                  as in our Terms and Conditions, which is accessible at <b
+                    >Elever</b
+                  > unless otherwise defined in this Privacy Policy.
+                </p>
+                <h2>Information Collection and Use</h2>
+                <p>
+                  For a better experience, while using our Service, we may
+                  require you to provide us with certain personally identifiable
+                  information, including but not limited to email. Additionally
+                  the technology used requires the user to manually accept the
+                  following permissions:
+                </p>
+                <ul>
+                  <li><pre>android.permission.RECORD_AUDIO</pre></li>
+                  <li><pre>android.permission.READ_PHONE_STATE</pre></li>
+                </ul>
+                <p><b>The Application does not send or record audio.</b></p>
+                <p>
+                  Phone state is used by the technology for basic functionality
+                  and only LOG DATA is temporarily stored by our servers.
+                </p>
+                <p>
+                  We don’t ask users to create a customized password, we create
+                  passwords for them and the password are stored in a secure
+                  server as a salted-hash string, users have the option of
+                  changing their password if they desire.
+                </p>
+                <p>
+                  The Application does use third party services that may collect
+                  information used to identify you (Apple store, Play Store).
+                </p>
+                <p>
+                  Link to privacy policy of third party service provider used by
+                  this app:
+                  <ul>
+                    <li>
+                      <a href="https://www.google.com/policies/privacy/"
+                        >Google Play Services Privacy Policy</a
+                      >
+                    </li>
+                  </ul>
+                </p>
+                <h2>Log Data</h2>
+                <p>
+                  We want to inform you that whenever you use our Service, in a
+                  case of an error in the app we collect data and information
+                  (through third party products) on your phone called Log Data.
+                  This Log Data may include information such as your device
+                  Internet Protocol (“IP”) address, device name, operating
+                  system version, the configuration of the app when utilizing
+                  our Service, the time and date of your use of the Service, and
+                  other statistics.
+                </p>
+                <h2>Cookies</h2>
+                <p>
+                  Cookies are files with a small amount of data that are
+                  commonly used as anonymous unique identifiers. These are sent
+                  to your browser from the websites that you visit and are
+                  stored on your device's internal memory.
+                </p>
+                <p>
+                  This Service does not use these “cookies” explicitly. However,
+                  the app may use third party code and libraries that use
+                  “cookies” to collect information and improve their services.
+                  You have the option to either accept or refuse these cookies
+                  and know when a cookie is being sent to your device. If you
+                  choose to refuse our cookies, you may not be able to use some
+                  portions of this Service.
+                </p>
+                <h2>Service Providers</h2>
+                <p>
+                  We may employ third-party companies and individuals due to the
+                  following reasons:
+                </p>
+                <ul>
+                  <li>To facilitate our Service;</li>
+                  <li>To provide the Service on our behalf;</li>
+                  <li>To perform Service-related services; or</li>
+                  <li>To assist us in analyzing how our Service is used.</li>
+                </ul>
+                <p>
+                  We want to inform users of this Service that these third
+                  parties have access to your Personal Information. The reason
+                  is to perform the tasks assigned to them on our behalf.
+                  However, they are obligated not to disclose or use the
+                  information for any other purpose.
+                </p>
+                <h2>Security</h2>
+                <p>
+                  We value your trust in providing us your Personal Information,
+                  thus we are striving to use commercially acceptable means of
+                  protecting it. But remember that no method of transmission
+                  over the internet, or method of electronic storage is 100%
+                  secure and reliable, and we cannot guarantee its absolute
+                  security.
+                </p>
+                <h2>Links to Other Sites</h2>
+                <p>
+                  This Service may contain links to other sites. If you click on
+                  a third-party link, you will be directed to that site. Note
+                  that these external sites are not operated by us. Therefore,
+                  we strongly advise you to review the Privacy Policy of these
+                  websites. We have no control over and assume no responsibility
+                  for the content, privacy policies, or practices of any
+                  third-party sites or services.
+                </p>
+                <h2>Children’s Privacy</h2>
+                <p>
+                  These Services do not address anyone under the age of 13. We
+                  do not knowingly collect personally identifiable information
+                  from children under 13. In the case it is reported that a
+                  child under 13 has provided us with personal information, we
+                  immediately delete this from our servers. If you are a parent
+                  or guardian and you are aware that your child has provided us
+                  with personal information, please contact us so that we will
+                  be able to do necessary actions.
+                </p>
+                <h2>Access to Information</h2>
+                <p>
+                  All users have access to the privacy policy from within the
+                  Application or by visiting our website at <a
+                    href="http://www.elever.ch/">www.elever.ch</a
+                  >.
+                </p>
+                <h2>Consent</h2>
+                <p>
+                  All users are prompted on startup with a popup confirmation to
+                  accept the policies stated in this document, language in the
+                  popup is simple and uncomplicated, if there is no consent the
+                  user account is flagged for deletion and the business partner
+                  that requested the account in question is notified.
+                </p>
+                <h2>Data Removal</h2>
+                <p>
+                  All users have access to an account purge button that will
+                  remove all linked data from our servers within 24-72 hours.
+                  However data will remain in database backups until a
+                  maintenance cleanup can be scheduled for purged accounts.
+                </p>
+                <h2>Changes to This Privacy Policy</h2>
+                <p>
+                  We may update our Privacy Policy from time to time. Thus, you
+                  are advised to review this page periodically for any changes.
+                  We will notify you of any changes by posting the new Privacy
+                  Policy on this page. These changes are effective immediately
+                  after they are posted on this page.
+                </p>
+                <h2>Contact Us</h2>
+                <p>
+                  If you have any questions or suggestions about our Privacy
+                  Policy, do not hesitate to contact us.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer lang={lang} />
+  </body>
+</html>
+
+<style>
+  h2 {
+    @apply text-3xl font-semibold lg:text-5xl;
+  }
+
+  a {
+    @apply text-cyan;
+  }
+
+  p {
+    @apply max-w-prose;
+  }
+</style>
