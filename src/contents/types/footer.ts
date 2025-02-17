@@ -23,5 +23,7 @@ export type Content = {
   footer: {
     productBy: string;
     address: string[];
+    handelsRegisterLabel: string;
+    dataProtectionPolicy: string;
   };
 };

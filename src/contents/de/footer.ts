@@ -33,5 +33,7 @@ export default {
       "Heinrichstrasse 267a",
       "8005 Zürich, Schweiz",
     ],
+    handelsRegisterLabel: "Handelsregistereintrag",
+    dataProtectionPolicy: "Datenschutzerklärung",
   },
 } satisfies Content;
